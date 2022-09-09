@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2022.5.30)  9 SEP 2022 16:20
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2022.5.30)  9 SEP 2022 17:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1791,14 +1791,13 @@ LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
 \tf@lot=\write7
 \openout7 = `Thesis.lot'.
 
- (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Prematter.tex [9
+ [9
 
 ] [10
 
-] [11]) [12] (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Mainmatter.tex (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_Intro.tex
+] (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Mainmatter.tex (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_Intro.tex
 第1章
 ) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_combinatorial_optimize.tex [1
-
 
 ] [2
 
@@ -1810,19 +1809,24 @@ LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
 第3章
 )) [5] [6
 
+] (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Appendix.tex
+附录 A
+) [7
+
+] [8
+
 ] (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 16.
 
-) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Backmatter.tex [7
+) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Backmatter.tex [9
 
 
-
-] [8
-
-] [9] [10
+] [10
 
 ] [11] [12
+
+] [13] [14
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
@@ -1831,15 +1835,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 93.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: FB99A6B9E9D8D3AD127933857DC014BB;775.
+(rerunfilecheck)             Checksum: 7C9230C9AC8388B2E4348722099D29EA;965.
  ) 
 Here is how much of TeX's memory you used:
- 37073 strings out of 479819
- 734713 string characters out of 5895846
- 1116123 words of memory out of 5000000
- 53523 multiletter control sequences out of 15000+600000
- 539866 words of font info for 114 fonts, out of 8000000 for 9000
+ 37067 strings out of 479819
+ 734345 string characters out of 5895846
+ 1115123 words of memory out of 5000000
+ 53521 multiletter control sequences out of 15000+600000
+ 539671 words of font info for 111 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 76i,12n,115p,972b,2933s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,11n,115p,972b,2933s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.xdv (30 pages, 62948 bytes).
+Output written on /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.xdv (30 pages, 56680 bytes).

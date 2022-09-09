@@ -379,6 +379,8 @@ OUTPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.lof
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.lot
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.lot
 OUTPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.lot
+INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Prematter.tex
+INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Prematter.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Mainmatter.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Mainmatter.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_Intro.tex
@@ -391,8 +393,3 @@ INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Appendix.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Appendix.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.bbl
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.bbl
-INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Backmatter.tex
-INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Backmatter.tex
-INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.aux
-INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.out
-INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.out
