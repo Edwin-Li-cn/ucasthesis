@@ -1,0 +1,22 @@
+\begin{thebibliography}{1}
+\providecommand{\biband}{和}
+\providecommand{\bibetal}{等}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Van~Laarhoven {\bibetal}(1992)Van~Laarhoven, Aarts, and
+  Lenstra]{van1992job}
+Van~Laarhoven~P~J, Aarts~E~H, Lenstra~J~K.
+\newblock Job shop scheduling by simulated annealing [J].
+\newblock Operations research, 1992, 40\penalty0 (1): 113-125.
+
+\end{thebibliography}
