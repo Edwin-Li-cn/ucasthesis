@@ -1,0 +1,112 @@
+\chapter{变分蒙特卡罗方法}\label{chap:variational_Monte_Carlo}
+\section{变分蒙特卡罗方法的原理}
+考虑试探波函数$|\psi_w \rangle = \sum_i a_i |\psi_{i}\rangle$，其中$|\psi_{i}\rangle$是该物理体系下包括$\hat{H}$在内的一组力学量完全集的共同本征态，相应的能量本征值为$E_i$。$a_i$即为该试探波函数展开的系数。
+
+该试探波函数的能量期望值$E_w$可以写为：
+\begin{equation} \label{eq:variational_theory}
+    \adddotsbeforeeqnnum%
+    E_w = \frac{\langle\psi_{w}|\hat{H}| \psi_{w}\rangle}{\langle\psi_{w}|\psi_{w}\rangle} = \frac{\sum_{i}|a_i|^{2} E_n}{\sum_{i} |a_{i}|^2} \geq E_0\frac{\sum_{i}|a_i|^{2}}{\sum_{i} |a_{i}|^2} = E_0
+\end{equation}
+
+式~\eqref{eq:variational_theory}表明，$E_w$给出了体系基态能量的一个上限。因此我们可以通过调整试探波函数的参数来不断减小$E_w$，使得其不断逼近基态能量$E_0$，相应的试探波函数也会更加逼近于基态波函数$\psi_0$。
+
+同直接求解定态薛定谔方程一样，$E_w$准确计算的复杂度随着物理系统中粒子的数量指数上升。因此通常采取蒙特卡罗采样的方法估算$E_w$：
+\begin{equation} \label{eq:E_w_sample}
+    \adddotsbeforeeqnnum%
+    \begin{split}
+        E_w &= \frac{\langle\psi_{w}|\hat{H}| \psi_{w}\rangle}{\langle\psi_w | \psi_w\rangle} \\
+        &= \sum_{s,s^{\prime}} \frac{\langle\psi_{w}|s\rangle \langle s|\hat{H}|s^{\prime}\rangle \langle s^{\prime}|\psi_{w}\rangle \langle s|\psi_{w} \rangle}{\langle\psi_{w}|\psi_{w}\rangle \langle s|\psi_{w} \rangle} \\
+        &= \sum_{s} \frac{\langle\psi_{w}|s\rangle \langle s|\psi_{w}\rangle}{\langle\psi_{w}|\psi_{w}\rangle} \sum_{s^{\prime}}\frac{\langle s|\hat{H}|s^{\prime}\rangle \langle s^{\prime}|\psi_{w}\rangle}{\langle s|\psi_{w}\rangle} \\
+        &= \sum_{s} P(s)E_{\text{loc}}(s)
+    \end{split}
+\end{equation}
+
+其中，$|s\rangle$是该物理系统下的一套完备基底，式中假设该物理系统是离散的，连续物理系统下的推导只是将式中求和改成积分，因此不再赘述。
+
+$P(s)=|\psi_{w}(s)|^{2} /(\sum\limits_{s}|\psi_{w}(s)|^{2})$是采样的目标概率分布。
+
+$E_{\text{loc}}(s)=\langle s|\hat{H}|\psi_{w}\rangle/\psi_{w}(s)$称之为局域能量。
+
+由式~\eqref{eq:E_w_sample}可知，$E_w$的值等于概率分布$P(s)$下局域能量$E_{\text{loc}}(s)$的期望。因此我们可以对概率分布$P(s)$进行蒙特卡罗采样，采样得到的态$(s_1, s_2, \cdots)$相应的局域能量平均值即为$E_w$的估计值。
+
+\section{蒙特卡罗采样方法}
+
+\section{试探波函数参数的更新}
+通过蒙特卡罗采样的方式估算$E_w$后，仍需要对试探波函数的参数进行不断的迭代更新，使得其不断逼近基态能量$\psi_0$。最简单直接的方法是计算$E_w$对参数$w_i$的偏导$\partial E_{w}/\partial w_{i}$，
+继而沿着梯度方向不断减小参数$w_i$，当$E_w$收敛时，得到最终的基态能量估计值以及相应的基态波函数，这种方法称之为直接梯度下降法。除此之外还有许多更加高效的方法，例如随机重配法\citep{sorella2001generalized}，共轭梯度下降法，随机梯度下降法等等。
+\subsection{直接梯度下降法}
+直接梯度下降法通过直接计算$E_w$对参数$w_i$的偏导$\partial E_{w}/\partial w_{i}$来更新参数，因此其具有方便简单，计算量小，容易实现的优点。
+
+但是，仅根据梯度来更新参数的方式很容易陷入局部最优。在更新迭代过程伊始，直接梯度下降法往往能取得较好的效果，但对于复杂的优化情形，例如试探波函数
+参数众多，$E_{w}$与各个参数关系复杂时，直接梯度下降法往往会导致$E_{w}$止步于某一较小值，难以继续优化。
+
+考虑$E_w$对参数$w_i$偏导$\partial E_{w}/\partial w_{i}$，有：
+\begin{equation} \label{eq:E_w_partial}
+    \adddotsbeforeeqnnum%
+    \frac{\partial E_w}{\partial w_i} = \sum_{s} (E_{\text{loc}}(s)\frac{\partial P(s)}{\partial w_i} + P(s)\frac{\partial E_{\text{loc}}(s)}{\partial w_i})
+\end{equation}
+
+其中概率分布$P(s)$对参数$w_i$偏导$\frac{\partial P(s)}{\partial w_i}$:
+\begin{equation} \label{eq:P(s)_partial}
+    \adddotsbeforeeqnnum%
+    \begin{split}
+        \frac{\partial P(s)}{\partial w_i}&=\frac{\psi_{w}^{*}(s)}{\sum\limits_{s}|\psi_{w}(s)|^{2}}\frac{\partial \psi_{w}(s)}{\partial w_{i}}-
+        \frac{|\psi_{w}(s)|^{2}}{(\sum\limits_{s}|\psi_{w}(s)|^{2})^2}\sum_{s^{\prime}}\psi_{w}^{*}(s^{\prime})\frac{\partial \psi_{w}(s^{\prime})}{\partial w_i}
+        \\
+        &=P(s)\frac{\partial \psi_{w}(s)}{\psi_{w}(s)\partial w_{i}}-P(s)\sum_{s^{\prime}}\frac{\psi_{w}^{*}(s^{\prime})\psi_{w}(s^{\prime})}{\sum\limits_{s}|\psi_{w}(s)|^{2}}\frac{\partial \psi_{w}(s^{\prime})}{\psi_{w}(s^{\prime})\partial w_{i}}
+        \\
+        &=P(s)\frac{\partial \psi_{w}(s)}{\psi_{w}(s)\partial w_{i}}-P(s)\sum_{s^{\prime}}P(s^{\prime})\frac{\partial \psi_{w}(s^{\prime})}{\psi_{w}(s^{\prime})\partial w_{i}}
+        \\
+        &=P(s)\Delta_{w_i}(s)-P(s)\sum_{s^{\prime}}P(s^{\prime})\Delta_{w_i}(s^{\prime})
+    \end{split}
+\end{equation}
+
+其中第一步利用了$|\psi_{w}(s)|^{2}=\psi_{w}^{*}(s)\psi_{w}(s)$，由于采用的试探波函数的参数是复数，有$\partial \psi_{w}^{*}(s)/\partial w_{i} = 0$。第二、三步利用了$P(s)=|\psi_{w}(s)|^{2} /(\sum\limits_{s}|\psi_{w}(s)|^{2})$。
+第四步定义试探波函数取对数后对参数$w_i$偏导$\Delta_{w_i}(s)=\partial \psi_{w}(s)/[\psi_{w}(s)\partial w_{i}]$
+
+接下来考虑局域能量$E_{\text{loc}}(s)$对参数$w_i$偏导$\partial E_{\text{loc}}(s)/(\partial w_i)$：
+\begin{equation} \label{eq:E_loc_partial}
+    \adddotsbeforeeqnnum%
+    \begin{split}
+        \frac{\partial E_{\text{loc}}(s)}{w_i} &= \sum_{s^{\prime}}\langle s|\hat{H}|s^{\prime}\rangle\frac{\partial (\psi_{w}(s^{\prime})/\psi_{w}(s))}{\partial w_i}
+        \\
+        &= \sum_{s^{\prime}}\langle s|\hat{H}|s^{\prime}\rangle [\frac{\partial \psi_{w}(s^{\prime})}{\psi_{w}(s) \partial w_{i}} - \frac{\psi_{w}(s^{\prime})}{\psi_{w}(s)}\frac{\partial \psi_{w}(s)}{\psi_{w}(s)\partial w_i}]
+        \\
+        &= \sum_{s^{\prime}}\langle s|\hat{H}|s^{\prime}\rangle \Delta_{w_i}(s^{\prime})\frac{\psi_{w}(s^{\prime})}{\psi_{w}(s)} - \Delta_{w_i}(s)E_{\text{loc}}(s)
+    \end{split}
+\end{equation}
+
+将式~\eqref{eq:P(s)_partial}和式~\eqref{eq:E_loc_partial}的结果代入式~\eqref{eq:E_w_partial}，有：
+\begin{equation} \label{eq:E_w_partial_result}
+    \adddotsbeforeeqnnum%
+    \begin{split}
+        \frac{\partial E_w}{\partial w_i} =& \sum_{s}[E_{\text{loc}}(s)P(s)\Delta_{w_i}(s)-E_{\text{loc}}(s)P(s)\sum_{s^{\prime}}P(s^{\prime})\Delta_{w_i}(s^{\prime})
+        \\
+        &+P(s)\sum_{s^{\prime}}\langle s|\hat{H}|s^{\prime}\rangle \Delta_{w_i}(s^{\prime})\frac{\psi_{w}(s^{\prime})}{\psi_{w}(s)} - P(s)\Delta_{w_i}(s)E_{\text{loc}}(s)]
+        \\
+        =& -\sum_{s}E_{\text{loc}}(s)P(s)\sum_{s^{\prime}}P(s^{\prime})\Delta_{w_i}(s^{\prime})+\sum_{s}P(s)\sum_{s^{\prime}}\langle s|\hat{H}|s^{\prime}\rangle \Delta_{w_i}(s^{\prime})\frac{\psi_{w}(s^{\prime})}{\psi_{w}(s)}
+        \\
+        =& -E_{w}\sum_{s}P(s)\Delta_{w_i}(s)+\sum_{s^{\prime}}\Delta_{w_i}(s^{\prime})|\psi_{w}(s^{\prime})|^{2}\sum_{s}\frac{P(s)\langle s|\hat{H}|s^{\prime}\rangle}{\psi_{w}(s)\psi_{w}^{*}(s^{\prime})}
+        \\
+        =& -E_{w}\sum_{s}P(s)\Delta_{w_i}(s)+\sum_{s^{\prime}}\Delta_{w_i}(s^{\prime})P(s^{\prime})[\sum_{s}\frac{\langle s^{\prime}|\hat{H}|s\rangle \psi_{w}(s)}{\psi_{w}(s^{\prime})}]^{*}
+        \\
+        =& -E_{w}\sum_{s}P(s)\Delta_{w_i}(s)+\sum_{s}\Delta_{w_i}(s)P(s)E_{\text{loc}}^{*}(s)
+        \\
+        =& \sum_{s}P(s)\Delta_{w_i}(s)(E_{\text{loc}}^{*}(s) - E_w)
+    \end{split}
+\end{equation}
+
+其中第三步利用了$E_w = \sum_{s} P(s)E_{\text{loc}}(s)$。
+
+第四步利用了$P(s)=|\psi_{w}(s)|^{2} /(\sum\limits_{s}|\psi_{w}(s)|^{2})$以及哈密顿算符的轭米性。第五步利用了$E_{\text{loc}}(s)=\langle s|\hat{H}|\psi_{w}\rangle/\psi_{w}(s)$。
+
+由式~\eqref{eq:E_w_partial_result}可知，$E_w$对参数$w_i$偏导$\partial E_{w}/\partial w_{i}$同样可以通过对概率分布$P(s)$进行蒙特卡罗采样进行计算，
+采样得到的态$(s_1, s_2, \cdots)$相应的$\Delta_{w_i}(s)(E_{\text{loc}}^{*}(s) - E_w)$平均值即为$\partial E_{\text{loc}}(s)/(\partial w_i)$的估计值。
+
+因此在更新试探波函数参数的每一步，我们都对概率分布$P(s)$进行蒙特卡罗采样，根据采样结果计算$E_w$以及其对参数的偏导$\partial E_{w}/\partial w_{i}$，进而沿着梯度方向不断减小参数$w_i$。
+当$E_w$收敛时，取$E_w$的实部作为最终的基态能量估计值，相应的试探波函数即为近似的基态波函数。
+
+\section{试探波函数}
+近年来，许多种试探波函数被尝试用来描述量子多体系统，例如神经网络量子态，张量网络态以及传统的经验波函数等等。本文采用基于神经网络的受限玻尔兹曼机作为试探波函数。
+
+受限玻尔兹曼机可以基于对目标概率分布的采样学习描述相应的概率分布。。。。。。。

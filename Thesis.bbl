@@ -13,10 +13,10 @@
   \let\eprint\href
 \fi
 
-\bibitem[Van~Laarhoven {\bibetal}(1992)Van~Laarhoven, Aarts, and
-  Lenstra]{van1992job}
-Van~Laarhoven~P~J, Aarts~E~H, Lenstra~J~K.
-\newblock Job shop scheduling by simulated annealing [J].
-\newblock Operations research, 1992, 40\penalty0 (1): 113-125.
+\bibitem[Sorella(2001)]{sorella2001generalized}
+Sorella~S.
+\newblock Generalized lanczos algorithm for variational quantum monte carlo
+  [J].
+\newblock Physical Review B, 2001, 64\penalty0 (2): 024512.
 
 \end{thebibliography}

@@ -11,61 +11,44 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Biblio/ref.bib
-Warning--I didn't find a database entry for "wikibook2014latex"
-Warning--I didn't find a database entry for "lamport1986document"
-Warning--I didn't find a database entry for "chu2004tushu"
-Warning--I didn't find a database entry for "chen2005zhulu"
-Warning--I didn't find a database entry for "walls2013drought"
-Warning--I didn't find a database entry for "betts2005aging"
-Warning--I didn't find a database entry for "chen1980zhongguo"
-Warning--I didn't find a database entry for "bravo1990comparative"
-Warning--I didn't find a database entry for "yuan2012lana"
-Warning--I didn't find a database entry for "yuan2012lanb"
-Warning--I didn't find a database entry for "yuan2012lanc"
-Warning--I didn't find a database entry for "stamerjohanns2009mathml"
-Warning--I didn't find a database entry for "hls2012jinji"
-Warning--I didn't find a database entry for "niu2013zonghe"
-Warning--I didn't find a database entry for "Bohan1928"
-Warning--I didn't find a database entry for "Dubrovin1906"
 You've used 1 entry,
             5319 wiz_defined-function locations,
-            1064 strings with 8057 characters,
-and the built_in function-call counts, 9320 in all, are:
-= -- 168
-> -- 1107
-< -- 1366
-+ -- 367
-- -- 71
-* -- 62
-:= -- 1307
+            1045 strings with 7778 characters,
+and the built_in function-call counts, 4498 in all, are:
+= -- 89
+> -- 496
+< -- 631
++ -- 171
+- -- 20
+* -- 38
+:= -- 650
 add.period$ -- 3
 call.type$ -- 1
-change.case$ -- 6
-chr.to.int$ -- 338
+change.case$ -- 4
+chr.to.int$ -- 156
 cite$ -- 2
-duplicate$ -- 21
-empty$ -- 60
-format.name$ -- 33
-if$ -- 2394
+duplicate$ -- 20
+empty$ -- 58
+format.name$ -- 13
+if$ -- 1158
 int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 0
 newline$ -- 21
 num.names$ -- 4
-pop$ -- 482
+pop$ -- 253
 preamble$ -- 1
-purify$ -- 5
+purify$ -- 3
 quote$ -- 0
-skip$ -- 991
+skip$ -- 440
 stack$ -- 0
-substring$ -- 424
+substring$ -- 195
 swap$ -- 0
-text.length$ -- 15
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 17
 warning$ -- 0
-while$ -- 21
+while$ -- 13
 width$ -- 0
 write$ -- 30
-(There were 16 warnings)
