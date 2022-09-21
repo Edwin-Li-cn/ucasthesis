@@ -29,9 +29,9 @@ $E_{\text{loc}}(s)=\langle s|\hat{H}|\psi_{w}\rangle/\psi_{w}(s)$称之为局域
 
 由式~\eqref{eq:E_w_sample}可知，$E_w$的值等于概率分布$P(s)$下局域能量$E_{\text{loc}}(s)$的期望。因此我们可以对概率分布$P(s)$进行蒙特卡罗采样，采样得到的态$(s_1, s_2, \cdots)$相应的局域能量平均值即为$E_w$的估计值。
 
-\section{蒙特卡罗采样方法}
+\section{蒙特卡罗采样方法} ~\label{sec:Monte_Carlo_sample_method}
 
-\section{试探波函数参数的更新}
+\section{试探波函数参数的更新} ~\label{sec:update_trial_function_method}
 通过蒙特卡罗采样的方式估算$E_w$后，仍需要对试探波函数的参数进行不断的迭代更新，使得其不断逼近基态能量$\psi_0$。最简单直接的方法是计算$E_w$对参数$w_i$的偏导$\partial E_{w}/\partial w_{i}$，
 继而沿着梯度方向不断减小参数$w_i$，当$E_w$收敛时，得到最终的基态能量估计值以及相应的基态波函数，这种方法称之为直接梯度下降法。除此之外还有许多更加高效的方法，例如随机重配法\citep{sorella2001generalized}，共轭梯度下降法，随机梯度下降法等等。
 \subsection{直接梯度下降法}

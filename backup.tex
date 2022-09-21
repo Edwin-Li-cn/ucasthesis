@@ -1,1 +1,15 @@
-\frac{\psi_{w}^{*}(s)\psi_{w}(s)}{\sum_{s^{\prime}}\langle \psi_{w}|s^{\prime}\rangle \langle s^{\prime}|\psi_{w}\rangle}
+\section{变分蒙特卡罗方法求解车间调度问题}
+在上节中，我们已经构建了模型，将车间调度问题映射到了一个量子系统，求解车间调度问题也就等价于求解该量子系统的基态。本节中，我们将采用变分蒙特卡罗方法求解该量子系统的基态，用受限玻尔兹曼机当作试探波函数描述对应系统的量子态。
+\subsection{受限玻尔兹曼机作为试探波函数}
+定义所有合理解的集合为$\mathscr{Y}=\{\mathcal{x}|\mathcal{x}\text{是合理解}\}$。按照硬约束的要求，我们不允许不合理解的存在，因此需要限制受限玻尔兹曼机中可见变量的取值范围：
+\begin{equation}
+    \psi_{w}(\mathcal{x})=\begin{cases} \frac{1}{Z}e^{\sum_{j} a_{j} x_{j}} \prod_{i} \cosh \left(b_{i}+\sum_{j} w_{i j} x_{j}\right) & \mathcal{x}\in\mathscr{Y} \\ 0 & \mathcal{x}\notin\mathscr{Y} \end{cases}
+\end{equation}
+
+其中$Z=\sum\limits_{\mathcal{x}\in\mathscr{Y}}e^{\sum_{j} a_{j} x_{j}} \prod_{i} \cosh \left(b_{i}+\sum_{j} w_{i j} x_{j}\right)$
+
+目标函数即为式~\eqref{eq:JSP_object_function}。我们可以采用~\ref{sec:update_trial_function_method}节介绍的更新试探波函数参数的方法来逐步优化玻尔兹曼机，使得其不断逼近基态波函数。
+\subsection{重要性采样条件}
+变分蒙特卡罗方法需要对试探波函数进行采样，按照~\ref{sec:Monte_Carlo_sample_method}节介绍的蒙特卡罗采样方法，为使得马尔科夫链能够收敛到静态分布，我们可以采取满足精细平衡条件的方法。
+
+同时，由定理~\ref{theorem:update_convergence}可知，我们可以采取只翻转关键变量的方法，

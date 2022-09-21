@@ -3,18 +3,112 @@
 \subsection{车间调度问题的描述}
 \subsection{车间调度问题的析取图表示}
 
-\section{变分蒙特卡罗方法求解车间调度问题}
-我们首先采用变分蒙特卡罗方法求解车间调度问题，用受限玻尔兹曼机当作试探波函数描述对应系统的量子态。首先我们需要构建模型，将车间调度问题映射到一个量子系统，求解车间调度问题也就等价于求解该量子系统的基态。
-\subsection{模型构建}
-设待求解车间调度问题总的工序数量为$N$，对各个工件上的各个工序依次标号$1\sim N$。析取图中，虚拟的开始工序标号$0$，虚拟的结束工序标号$N+1$
+\section{车间调度问题模型的构建}
+为了求解车间调度问题，我们需要将其映射到一个量子系统上，求解车间调度问题也就等价于求解该量子系统的基态。因此我们
+需要构造模型，将问题进行等价表述，再采用前面章节介绍的变分、扩散蒙特卡罗方法进行求解。
+
+\subsection{变量定义}
+设待求解车间调度问题总的工序数量为$N$，对各个工件上的各个工序依次标号$1\sim N$。析取图中，虚拟的起始工序标号$0$，虚拟的结束工序标号$N+1$
 
 对于任意两个不属于同一工件但需要在同一机器上加工的工序$\{i,j|i,j\in \{1,\cdots,N\}\wedge J_i \neq J_j\wedge M_i=M_j\}$，定义二进制变量$\{x_{i,j}|x_{i,j} \in \{0,1\}\wedge (i<j)\}$。
 
 $x_{i,j}=1$意味着在这个变量对应的方案下，工序$i$比工序$j$更早加工；$x_{i,j}=0$意味着在这个变量对应的方案下，工序$i$比工序$j$更晚加工。
 
-对应在析取图中，每个二进制变量$x_{i,j}$一对一对应于未确定方向的析取弧，因此当所有定义的二进制变量的值确定时，相应的调度方案也就确定了。我们将一个确定的调度方案对应的所有二进制变量取值的集合记作$\mathcal{x}$
+对应在析取图中，每个二进制变量$x_{i,j}$一对一对应于未确定方向的析取弧，因此当所有定义的二进制变量的值确定时，相应的调度方案也就确定了。我们将一个确定的调度方案对应的所有二进制变量取值的集合记作$\mathcal{x}$，对应于一个解。
+解$\mathcal{x}$对应的有向图记作$D_{\mathcal{x}}$，有向图中已经确定了方向的析取弧的集合记作$E_{\mathcal{x}}$，受工件上工序加工顺序限制的方向固定的边记作$A$。
 
-然而，这样一个确定的调度方案并不一定是合理的，因为确定析取弧方向后的析取图可能是一个循环的有向图。我们不能从一个循环图中确定循环路径上工序的先后顺序。因此，相应的$\mathcal{x}$是一个不合理解。
+车间调度问题等价于寻找任意一个最优解$\mathcal{x}_{0} \in \mathscr{R}_\text{opt}$，其中$\mathscr{R}_\text{opt}$表示全局最优解的集合，该集合中任意一个解所对应的调度方案都能使得完工时间最短。
 
-解决不合理解的方法有两种：一种是在目标函数上附加对不合理解的惩罚项，这种方式会趋使生成的解朝着可行解的方向更新，但并不能杜绝不合理解，并且会使得目标函数更加复杂，增大优化的难度；另一种是在解的更新方式上作限制，使其总是在可行解的范围内迭代，这种方式
-构建难度大，需要保证解的收敛性，往往需要进行额外的限制。
+然而，这样一个确定的调度方案并不一定是合理的，因为确定析取弧方向后的析取图可能是一个循环的有向图，不存在最长路径。我们也不能从一个循环图中确定循环路径上工序的先后顺序。因此，相应的$\mathcal{x}$是一个不合理解。
+
+\subsection{添加约束}
+解决不合理解的方法有两种：一种是在目标函数上附加对不合理解的惩罚项，这种方式会趋使生成的解朝着可行解的方向更新，但并不能杜绝不合理解，并且会使得目标函数更加复杂，增大优化的难度。我们称这种约束方式为软约束；另一种是在解的更新方式上作限制，使其总是在可行解的范围内迭代，这种方式
+构建难度大，需要保证解的收敛性，往往需要进行额外的限制。我们称这种约束方式为硬约束。
+
+我们采用\citet{van1992job}更新解的方式来添加硬约束，以下就约束方式以及收敛性予以说明：
+
+在每次更新解的时候，不同于常规随机翻转所有变量的更新方式，我们仅仅随机翻转对应于关键弧$(v,w)$的变量$x_{v,w}~(v<w)$，方便起见，我们将这些变量称为关键变量。从图论的观点看，我们仅仅变更有向图中，处在最长路径中弧的方向$(v,w)\rightarrow(w,v)$，相应的变量$x_{v,w} = 1 - x_{v,w}~(v<w)$。
+
+选取这种更新方式有以下几点原因：
+\begin{enumerate}
+    \item 翻转有向图中非关键路径所产生的新的非循环有向图，其最长路径的长度一定大于等于原有向图最长路径的长度（因为新的非循环有向图仍包含原最长路径）。
+    \item 翻转有向图中的关键路径$(v,w)\rightarrow(w,v)$所产生的新的有向图一定仍是一个非循环图。
+    \item 对于任意一个合理解$\mathcal{x}$，总存在有限的翻转关键变量的步骤，使其到达某个最优解$\mathcal{x}_{0} \in \mathscr{R}_\text{opt}$，相应的调度方案即是使得完工时间最短的最优方案。
+\end{enumerate}
+
+值得注意的是，第一条原因有一定贪婪的元素在其中，因此并不充分。实际上我们在更新解的时候，通常也会接受相对更差的解，这样往往能够在一定程度上避免陷入局部最优，这种思想在经典拟退火算法中也有所体现。
+以下对第二、三条原因作进一步分析证明：
+\begin{assertion} \label{assert:update_no_cycle}
+    假设弧$e=(v,w)\in E_i$是一个非循环有向图$D_i$的关键弧，令$D_j$表示翻转图$D_i$中弧$e$所得到的有向图。那么图$D_j$一定也是非循环的。
+\end{assertion}
+
+\begin{proof}
+    假设图$D_j$是一个循环图，由于原图$D_i$是非循环的，图$D_j$相较于$D_i$只是删除了弧$(v,w)$，增加了弧$(w,v)$。删除一个弧不会使图变得循环，增加弧才有可能。
+    因此弧$(w,v)$一定处在$D_j$中的循环路径上，即图$D_j$中同时存在弧$(w,v)$和路径$(v,x,y,\cdots,w)$。由于图$D_j$是由图$D_i$翻转弧$(v,w)$得到的，
+    图$D_i$中一定也存在路径$(v,x,y,\cdots,w)$。显然，这条路径要比直接经过路径$(v,w)$要长（因为车间调度问题对应的图的权重在顶点上，对应于各个工序的加工时间），与前提
+    弧$e=(v,w)$是一个关键弧（位于最长路径中）矛盾，因此假设不成立，图$D_j$一定是非循环的。
+\end{proof}
+
+为了证明上述第三条原因，我们需要先证明一个引理：
+\begin{lemma} \label{lemma:set_K_not_empty}
+    对于任意一个非最优的合理解$\mathcal{x}\notin \mathscr{R}_\text{opt}$和任意一个最优解$\mathcal{x}_{0} \in \mathscr{R}_\text{opt}$，集合$K_{\mathcal{x}}(\mathcal{x}_0)=\{e=(v,w)\in E_{\mathcal{x}}|e \text{是关键弧}\wedge (w,v)\in E_{\mathcal{x}_0}\}$一定非空。
+    其中，$E_{\mathcal{x}}$表示$\mathcal{x}$所对应的有向图中确定方向的析取弧。
+\end{lemma}
+
+\begin{proof}
+    我们将分三部分进行证明：首先证明$E_{\mathcal{x}}$总包含关键弧；然后证明总是存在关键弧$e \in E_{\mathcal{x}}$且$e \notin E_{\mathcal{x}_0}$；最后利用这两个结论说明集合$K_{\mathcal{x}}(\mathcal{x}_0)$一定非空。
+    \begin{enumerate}
+        \item 假设$E_{\mathcal{x}}$不包含关键弧，那么所有的关键弧都属于$A$，即最长路径是某一工件对应的所有工序的加工顺序。因此其完工时间便是该工件上所有工序的加工时间之和。显然，这是所有可能的生产调度方案完工时间的下限。
+        即任意一个有向图的最长路径长度都要大于$\mathcal{x}$所对应的有向图的最长路径长度，因此$\mathcal{x}$一定是最优解，这与前提矛盾，因此假设不成立，$E_{\mathcal{x}}$一定包含关键弧。
+        \item 假设$E_{\mathcal{x}}$中所有关键弧$e$都属于$E_{\mathcal{x}_0}$，那么$\mathcal{x}_0$所对应的图一定包含了$\mathcal{x}$所对应的有向图的最长路径，其最长路径的长度是$\mathcal{x}_0$所对应的图的最长路径长度下限。
+        而$\mathcal{x}_0$是最优解，其对应的图的最长路径长度应当是所有可能的有向图中最小的，因此$\mathcal{x}$一定也是一个最优解，这与前提矛盾，因此假设不成立，一定关键弧$e \in E_{\mathcal{x}}$且$e \notin E_{\mathcal{x}_0}$。
+        \item 因为$E_{\mathcal{x}}$总是包含不属于$E_{\mathcal{x}_0}$的关键弧$e=(v,w)$，且有向图中要确定析取弧方向，必然包含$(v,w)\text{和}(w,v)$二者之一，所以必有$(w,v) \in E_{\mathcal{x}_0}$，即集合$K_{\mathcal{x}}(\mathcal{x}_0)$一定非空。
+    \end{enumerate}
+\end{proof}
+
+\begin{theorem} \label{theorem:update_convergence}
+    对于任意一个非最优的合理解$\mathcal{x} \notin \mathscr{R}_\text{opt}$，总可以通过翻转关键变量的方式构造一个有限长度的更新序列，使得解$\mathcal{x}$最终到达某个最优解$\mathcal{x}_{0} \in \mathscr{R}_\text{opt}$
+\end{theorem}
+
+\begin{proof}
+    我们可以按照如下规则构造一个有限长度的更新序列$\{\mathcal{\lambda}_{0}, \mathcal{\lambda}_{1}, \cdots\}$：
+    \begin{enumerate}
+        \item 首先，初始解为选定的任意一个非最优的合理解$\mathcal{\lambda}_{0}=\mathcal{x}$
+        \item 接下来每一步更新解$\mathcal{\lambda}_{k} \rightarrow \mathcal{\lambda}_{k+1}$时，都只翻转$E_{\mathcal{\lambda}_{k}}$中属于集合$K_{\mathcal{\lambda}_k}(\mathcal{x}_0)$的边$e$所对应的变量。
+        因为$e$是关键弧，由断言~\ref{assert:update_no_cycle}可知，新解$\mathcal{\lambda}_{k+1}$对应的图$D_{\lambda_{k+1}}$一定是非循环的。并且由引理~\ref{lemma:set_K_not_empty}可知，集合$K_{\mathcal{\lambda}_k}(\mathcal{x}_0)$
+        非空，意味着这种更新操作总是存在的。最后，翻转的变量总是关键变量，属于之前我们定义的更新操作。
+    \end{enumerate}
+
+    分析：对于任意一个非最优的合理解$\mathcal{x}$，定义集合$M_{\mathcal{x}}(\mathcal{x_0})=\{e=(v,w)\in E_{\mathcal{x}}|(w,v)\in E_{\mathcal{x_0}}\}$。
+    容易看出$|M_{\mathcal{\lambda}_{k+1}}(\mathcal{x}_0)|=|M_{\mathcal{\lambda}_{k}}(\mathcal{x}_0)|-1$。因此，令$k=|M_{\mathcal{x}}(\mathcal{x}_0)|$，有$|M_{\mathcal{\lambda}_{k}}(\mathcal{x}_0)|=0$。由于$K_{\mathcal{x}}(\mathcal{x}_0)\subseteq M_{\mathcal{x}}(\mathcal{x_0})$，
+    可知$K_{\mathcal{\lambda}_{k}}(\mathcal{x}_0)=\varnothing$。由引理~\ref{lemma:set_K_not_empty}可知，
+    解$\mathcal{\lambda}_{k}$一定是最优解$\mathcal{\lambda}_{k}\in\mathscr{R}_\text{opt}$。这意味着我们构建了$k+1$长度的更新序列，使得任意一个非最优合理解$\mathcal{x}$通过翻转关键变量的方式到达了某个最优解$\mathcal{x}_0$，定理得证。
+\end{proof}
+
+综上所述，随机翻转对应于关键弧$(v,w)$的关键变量$x_{v,w}$的更新方式能够确保解$\mathcal{x}$在合理解的范围内更新，并且任意一个合理解都能通过这种方式更新到最优解，因此可以用来构建马尔科夫链，在变分和扩散蒙特卡罗方法中加以应用。
+
+然而需要指出的是，这样的一个马尔科夫链是可约的，即链中任意两个态之间并不一定能够通过这种更新关键变量的方式到达彼此，这是因为虽然任意一个合理解都可以到达最优解，但是最优解并不一定能够到达任意一个合理解。
+
+\subsection{目标函数}
+因为我们采用了硬约束的方式，没有在目标函数上附加对不合理解额外的惩罚项，所以目标函数仅仅是合理解$\mathcal{x}$对应的调度方案的完工时间。
+
+为方便表示，我们定义$makespan(\mathcal{x}|v)$为合理解$\mathcal{x}$对应的图$D_{\mathcal{x}}=(V,E\cup A)$中，虚拟起始顶点到顶点$v\in V$的最长路径长度。即：
+\begin{equation}
+    makespan(\mathcal{x}|v) = P_{v} + \max_{u\in \mathscr{N}_{v}}(makespan(\mathcal{x}|u))
+\end{equation}
+
+其中$\mathscr{N}_{v}=\{u|(uv\in A)\vee(uv\in E_{M_{v}}\wedge(\mathcal{x}_{uv}=1\vee\mathcal{x}_{vu}=0))\}$表示与$v$邻接的，存在边指向$v$的顶点的集合。
+$uv$是有向边$(u,v)$的简写。$P_v$代表顶点$v$对应的工序的加工时间。$E_{M_v}$代表顶点$v$对应的工序所需加工的机器$M_v$在析取图中对应的析取弧的集合。
+
+按上述定义，目标函数可以写为：
+\begin{equation} \label{eq:JSP_object_function}
+    H=makespan(\mathcal{x}|end)
+\end{equation}
+其中$end$代表有向图中虚拟的结束顶点。求任意一个解$\mathcal{x}$对应的目标函数值可以采用一个简单的递归算法实现，其复杂度为$\mathcal{O}(|V|+|E|+|A|)$。
+
+用$\mathcal{x}_{k}$表示解$\mathcal{x}$中第$k$个二进制变量，
+需要指出，由于我们采用的二进制变量$\mathcal{x}_{k}\in\{1,0\}$，与量子伊辛模型中$\hat{\sigma}_z^{(k)}$的本征值$\sigma_z^{(k)} \in \{1,-1\}$，存在简单的映射关系$x_{k} = (1+\sigma_z^{(k)})/2$，
+因此目标函数可以映射到由各个$\hat{\sigma}_z^{(k)}$组成的量子系统。该量子系统的哈密顿量在该组二进制变量构成的基底中的矩阵为：
+\begin{equation} \label{eq:JSP_H_objection}
+    \langle \mathcal{x}|\hat{H}|\mathcal{x}^{\prime}\rangle=\delta_{\mathcal{x},\mathcal{x}^{\prime}}*makespan(\mathcal{x}|end)
+\end{equation}

@@ -387,12 +387,14 @@ INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_combinato
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_combinatorial_optimize.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_variational_Monte_Carlo.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_variational_Monte_Carlo.tex
-INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_diffusion_Monte_Carlo
-INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_diffusion_Monte_Carlo
+INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_diffusion_Monte_Carlo.tex
+INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_diffusion_Monte_Carlo.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_JSP.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_JSP.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_summary.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_summary.tex
+INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研.tex
+INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.bbl
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.bbl
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Backmatter.tex
