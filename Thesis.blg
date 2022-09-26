@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Thesis.aux
-The style file: Biblio/gbt7714-author-year.bst
+The style file: Biblio/gbt7714-numerical.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 150 items from 100.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
@@ -9,46 +9,45 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Biblio/ref.bib
 You've used 2 entries,
-            5319 wiz_defined-function locations,
-            1053 strings with 7936 characters,
-and the built_in function-call counts, 13730 in all, are:
-= -- 257
-> -- 1603
+            4948 wiz_defined-function locations,
+            995 strings with 7508 characters,
+and the built_in function-call counts, 13564 in all, are:
+= -- 235
+> -- 1591
 < -- 1997
-+ -- 538
-- -- 91
-* -- 98
-:= -- 1909
++ -- 536
+- -- 87
+* -- 81
+:= -- 1887
 add.period$ -- 6
 call.type$ -- 2
-change.case$ -- 10
+change.case$ -- 4
 chr.to.int$ -- 494
-cite$ -- 4
-duplicate$ -- 41
-empty$ -- 117
-format.name$ -- 46
-if$ -- 3550
-int.to.chr$ -- 3
-int.to.str$ -- 1
+cite$ -- 2
+duplicate$ -- 38
+empty$ -- 110
+format.name$ -- 42
+if$ -- 3515
+int.to.chr$ -- 1
+int.to.str$ -- 3
 missing$ -- 0
 newline$ -- 26
-num.names$ -- 8
-pop$ -- 735
+num.names$ -- 6
+pop$ -- 732
 preamble$ -- 1
-purify$ -- 8
+purify$ -- 2
 quote$ -- 0
-skip$ -- 1430
+skip$ -- 1419
 stack$ -- 0
 substring$ -- 619
-swap$ -- 0
+swap$ -- 2
 text.length$ -- 23
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 34
+type$ -- 26
 warning$ -- 0
-while$ -- 34
+while$ -- 32
 width$ -- 0
 write$ -- 45

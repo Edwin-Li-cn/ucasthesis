@@ -1,0 +1,84 @@
+\chapter{神经网络相关文献}
+\section{神经网络相关：方向接近}
+    \begin{enumerate}
+        \item \citet{carleo2017solving}：
+            \begin{itemize}
+                \item 工作内容概述：利用受限玻尔兹曼机描述量子多体系统的波函数，并利用基于随机重配\citep{sorella2007weak}的VMC方法求解了一维、二维的横向场伊辛模型以及海森堡反铁磁模型的基态。最后利用时间依赖的VMC方法\citep{carleo2012localization, carleo2014light}研究了RBM表示遵循含时薛定谔方程演化的波函数的能力。
+                \item 课题相关性：基于RBM的VMC方法求解量子系统的基态；基于时间依赖的VMC方法优化参数含时的RBM也是一种模拟量子退火的方法。
+                \item 核心创新点：RBM表示量子多体系统波函数
+                \item 先进性：作者声明在这个研究案例上，随机重配法优于\citet{harju1997stochastic}所采用的随机梯度下降法。
+                \item 影响力：引用次数：1580。用RBM表示量子多体系统的权威文章，发表在science，相关领域基本都会引用。
+                \item 相关代码：提供开源代码C++格式，github上有很多复现工作。
+            \end{itemize}
+
+        \end{enumerate}
+
+\section{神经网络相关：方向较远}
+    \begin{enumerate}
+        \item \citet{saito2017solving}：
+        \begin{itemize}
+            \item 工作内容概述：受\citet{carleo2017solving}用神经网络表示量子态并优化的启发，提出使用全连接的前馈神经网络作为试探波函数，并利用基于标准最速梯度下降（如\citet{becca2017quantum}介绍的）的VMC方法求解了玻色子哈伯德模型的基态。
+            \item 课题相关性：基于神经网络的VMC方法求解量子系统基态。
+            \item 核心创新点：全连接的前馈神经网络描述量子态。
+            \item 先进性：结果与精确对角化的结果符合，未与其他方法比较。
+            \item 影响力：引用次数：123。
+            \item 相关代码：
+        \end{itemize}
+        \item \citet{huang2017accelerated}：
+        \begin{itemize}
+            \item 工作内容概述：一般人们采用局部更新配置的蒙特卡罗方法对试探波函数进行采样，然而这种方式在大规模、挑战性很高（处在相变临界点、强阻挫等等）的量子系统中效率往往很低（新配置和原配置的改变小，互相转变的接受概率几乎相等）。
+            文中提出改进方法：首先用监督学习方法训练受限玻尔兹曼机来描述（试探）波函数，用训练得到的受限玻尔兹曼机提出新配置，
+            再用梅特罗波利斯-黑斯廷斯算法\citep{metropolis1953equation, hastings1970monte}对原（试探）波函数进行采样。
+            文章采用上述改进方法对alicov-Kimball模型\citep{falicov1969simple}进行了求解，结果表明在相变临界点附近的量子系统中，马尔科夫链新配置的接受概率和自修正时间都有所改善。
+            \item 课题相关性：常规局部更新配置的蒙特卡罗方法难以对复杂的（试探）波函数进行采样，文中提出的方式能够提高效率。
+            \item 核心创新点：利用机器学习改进对复杂（试探）波函数的蒙特卡罗采样。
+            \item 先进性：优于常规局部更新配置的蒙特卡罗采样方法
+            \item 影响力：引用次数：257。通用的方法论，在统计物理、凝聚态领域比较重要。
+            \item 相关代码：
+        \end{itemize}
+        \item \citet{liu2017self}：
+        \begin{itemize}
+            \item 工作内容概述提出了自学习蒙特卡罗方法（SLMC），原理类似于\citet{huang2017accelerated}的工作，但是采用的是线性回归方法训练等效哈密顿量来描述原哈密顿量。其在二维方格的铁磁体伊辛模型上进行了测试，大大减小了在相变点附近的自修正时间（因为更新方式变为RBM提供的全局更新方式）。
+            \item 课题相关性：对二维方格的铁磁体伊辛模型进行了测试，线性回归方法训练RBM也可以借鉴。
+            \item 核心创新点：利用机器学习改进蒙特卡罗采样。
+            \item 先进性：优于常规局部更新配置的蒙特卡罗采样方法
+            \item 影响力：引用次数：240。通用的方法论，在统计物理、凝聚态领域比较重要。
+            \item 相关代码：
+        \end{itemize}
+        \item \citet{inack2018projective}：
+            \begin{itemize}
+                \item 工作内容概述：采用非受限玻尔兹曼机作为试探波函数（仅三个参数），并用标准的随机梯度下降法（如\citet{becca2017quantum}介绍的）进行优化，继而在PQMC上对铁磁体量子伊辛链进行模拟，得到了精确的基态能量。
+                \item 课题相关性：神经网络用作试探波函数予以优化，并用于PQMC进行进一步优化得到量子体系基态能量。
+                \item 核心创新点：非受限玻尔兹曼机作为试探波函数，并用于PQMC进行进一步优化。
+                \item 先进性：优于传统的PQMC，减小了PQMC中有限walker所导致的误差。仅三个参数取得了RBM中隐藏变量数等同于可见变量数的结果（但需要额外对隐藏变量采样）。效果优于传统的玻尔兹曼试探波函数。
+                \item 影响力：引用次数：26。
+                \item 相关代码：
+            \end{itemize}
+        \item \citet{saito2018machine}：
+            \begin{itemize}
+                \item 工作内容概述：继\citet{saito2017solving}的工作，研究了多层全连接的前馈神经网络和卷积神经网络作为试探波函数，并利用AdaGrad方法\citep{duchi2011adaptive}、Adam方法\citep{kingma2014adam}进行优化，求解了玻色子哈伯德模型的基态。
+                \item 课题相关性：用神经网络表示量子态，并进行优化来求解量子系统基态。
+                \item 核心创新点：采用多层全连接的前馈神经网络和卷积神经网络表示量子态，研究其效果。
+                \item 先进性：卷积神经网络表现最好；AdaGrad方法\citep{duchi2011adaptive}、Adam方法\citep{kingma2014adam}优于标准最速梯度下降法（如\citet{becca2017quantum}介绍的）。
+                \item 影响力：引用次数：97。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{freitas2018neural}：
+            \begin{itemize}
+                \item 工作内容概述：用非受限玻尔兹曼机表示量子态，通过增加隐藏变量和更新参数的方式来表征量子算符的作用。然后通过两种近似方法将非受限玻尔兹曼机投影到了受限玻尔兹曼机上，用以提取信息，实现了不依赖高算力要求的蒙卡对神经网络量子态进行优化。
+                \item 课题相关性：非受限玻尔兹曼机表示量子态并进行优化。
+                \item 核心创新点：通过增加隐藏变量和更新参数的方式来表征量子算符的作用，实现了不依赖高算力要求的蒙卡对神经网络量子态进行优化。
+                \item 先进性：
+                \item 影响力：引用次数：20。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{carleo2018constructing}：
+            \begin{itemize}
+                \item 工作内容概述：用深（两层）玻尔兹曼机（DBM）表示量子态，通过改变DBM参数和隐藏变量数量的方式表征量子系统的虚时间演化，得以用线性增长的神经元网络表示最后的量子系统基态。在横向场伊辛模型和反铁磁体海森堡模型上进行了测试。
+                \item 课题相关性：深（两层）玻尔兹曼机（DBM）表示量子态，并进行优化来求解量子系统基态。
+                \item 核心创新点：通过改变DBM参数和隐藏变量数量的方式表征量子系统的虚时间演化，用以得到基态。
+                \item 先进性：
+                \item 影响力：引用次数：146。
+                \item 相关代码：提供了python格式的部分（构建DBM）开源代码。
+            \end{itemize}
+    \end{enumerate}

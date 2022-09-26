@@ -1,0 +1,262 @@
+\begin{thebibliography}{39}
+\providecommand{\biband}{和}
+\providecommand{\bibetal}{等}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Becca {\bibetal}(2017)Becca and Sorella]{becca2017quantum}
+Becca~F, Sorella~S.
+\newblock Quantum monte carlo approaches for correlated systems [M].
+\newblock Cambridge University Press, 2017.
+
+\bibitem[Boixo {\bibetal}(2014)Boixo, R{\o}nnow, Isakov, Wang, Wecker, Lidar,
+  Martinis, and Troyer]{boixo2014evidence}
+Boixo~S, R{\o}nnow~T~F, Isakov~S~V, et~al.
+\newblock Evidence for quantum annealing with more than one hundred qubits [J].
+\newblock Nature physics, 2014, 10\penalty0 (3): 218-224.
+
+\bibitem[Carleo {\bibetal}(2017)Carleo and Troyer]{carleo2017solving}
+Carleo~G, Troyer~M.
+\newblock Solving the quantum many-body problem with artificial neural networks
+  [J].
+\newblock Science, 2017, 355\penalty0 (6325): 602-606.
+
+\bibitem[Carleo {\bibetal}(2012)Carleo, Becca, Schir{\'o}, and
+  Fabrizio]{carleo2012localization}
+Carleo~G, Becca~F, Schir{\'o}~M, et~al.
+\newblock Localization and glassy dynamics of many-body quantum systems [J].
+\newblock Scientific reports, 2012, 2\penalty0 (1): 1-6.
+
+\bibitem[Carleo {\bibetal}(2014)Carleo, Becca, Sanchez-Palencia, Sorella, and
+  Fabrizio]{carleo2014light}
+Carleo~G, Becca~F, Sanchez-Palencia~L, et~al.
+\newblock Light-cone effect and supersonic correlations in one-and
+  two-dimensional bosonic superfluids [J].
+\newblock Physical Review A, 2014, 89\penalty0 (3): 031602.
+
+\bibitem[Carleo {\bibetal}(2018)Carleo, Nomura, and
+  Imada]{carleo2018constructing}
+Carleo~G, Nomura~Y, Imada~M.
+\newblock Constructing exact representations of quantum many-body systems with
+  deep neural networks [J].
+\newblock Nature communications, 2018, 9\penalty0 (1): 1-11.
+
+\bibitem[Casula {\bibetal}(2004)Casula, Attaccalite, and
+  Sorella]{casula2004correlated}
+Casula~M, Attaccalite~C, Sorella~S.
+\newblock Correlated geminal wave function for molecules: An efficient
+  resonating valence bond approach [J].
+\newblock The Journal of chemical physics, 2004, 121\penalty0 (15): 7110-7126.
+
+\bibitem[Casula {\bibetal}(2005)Casula, Filippi, and
+  Sorella]{casula2005diffusion}
+Casula~M, Filippi~C, Sorella~S.
+\newblock Diffusion monte carlo method with lattice regularization [J].
+\newblock Physical review letters, 2005, 95\penalty0 (10): 100201.
+
+\bibitem[Duchi {\bibetal}(2011)Duchi, Hazan, and Singer]{duchi2011adaptive}
+Duchi~J, Hazan~E, Singer~Y.
+\newblock Adaptive subgradient methods for online learning and stochastic
+  optimization. [J].
+\newblock Journal of machine learning research, 2011, 12\penalty0 (7).
+
+\bibitem[Falicov {\bibetal}(1969)Falicov and Kimball]{falicov1969simple}
+Falicov~L, Kimball~J.
+\newblock Simple model for semiconductor-metal transitions: Sm b 6 and
+  transition-metal oxides [J].
+\newblock Physical Review Letters, 1969, 22\penalty0 (19): 997.
+
+\bibitem[Finnila {\bibetal}(1994)Finnila, Gomez, Sebenik, Stenson, and
+  Doll]{finnila1994quantum}
+Finnila~A~B, Gomez~M, Sebenik~C, et~al.
+\newblock Quantum annealing: A new method for minimizing multidimensional
+  functions [J].
+\newblock Chemical physics letters, 1994, 219\penalty0 (5-6): 343-348.
+
+\bibitem[Foulkes {\bibetal}(2001)Foulkes, Mitas, Needs, and
+  Rajagopal]{foulkes2001quantum}
+Foulkes~W, Mitas~L, Needs~R, et~al.
+\newblock Quantum monte carlo simulations of solids [J].
+\newblock Reviews of Modern Physics, 2001, 73\penalty0 (1): 33.
+
+\bibitem[Freitas {\bibetal}(2018)Freitas, Morigi, and
+  Dunjko]{freitas2018neural}
+Freitas~N, Morigi~G, Dunjko~V.
+\newblock Neural network operations and susuki--trotter evolution of neural
+  network states [J].
+\newblock International Journal of Quantum Information, 2018, 16\penalty0 (08):
+  1840008.
+
+\bibitem[Harju {\bibetal}(1997)Harju, Barbiellini, Siljam{\"a}ki, Nieminen, and
+  Ortiz]{harju1997stochastic}
+Harju~A, Barbiellini~B, Siljam{\"a}ki~S, et~al.
+\newblock Stochastic gradient approximation: An efficient method to optimize
+  many-body wave functions [J].
+\newblock Physical review letters, 1997, 79\penalty0 (7): 1173.
+
+\bibitem[Hastings(1970)]{hastings1970monte}
+Hastings~W~K.
+\newblock Monte carlo sampling methods using markov chains and their
+  applications [J].
+\newblock 1970.
+
+\bibitem[Heim {\bibetal}(2015)Heim, R{\o}nnow, Isakov, and
+  Troyer]{heim2015quantum}
+Heim~B, R{\o}nnow~T~F, Isakov~S~V, et~al.
+\newblock Quantum versus classical annealing of ising spin glasses [J].
+\newblock Science, 2015, 348\penalty0 (6231): 215-217.
+
+\bibitem[Huang {\bibetal}(2017)Huang and Wang]{huang2017accelerated}
+Huang~L, Wang~L.
+\newblock Accelerated monte carlo simulations with restricted boltzmann
+  machines [J].
+\newblock Physical Review B, 2017, 95\penalty0 (3): 035105.
+
+\bibitem[Inack {\bibetal}(2015)Inack and Pilati]{inack2015simulated}
+Inack~E, Pilati~S.
+\newblock Simulated quantum annealing of double-well and multiwell potentials
+  [J].
+\newblock Physical Review E, 2015, 92\penalty0 (5): 053304.
+
+\bibitem[Inack {\bibetal}(2018{\natexlab{a}})Inack, Giudici, Parolini, Santoro,
+  and Pilati]{inack2018understanding}
+Inack~E, Giudici~G, Parolini~T, et~al.
+\newblock Understanding quantum tunneling using diffusion monte carlo
+  simulations [J].
+\newblock Physical Review A, 2018, 97\penalty0 (3): 032307.
+
+\bibitem[Inack {\bibetal}(2018{\natexlab{b}})Inack, Santoro, Dell'Anna, and
+  Pilati]{inack2018projective}
+Inack~E, Santoro~G, Dell'Anna~L, et~al.
+\newblock Projective quantum monte carlo simulations guided by unrestricted
+  neural network states [J].
+\newblock Physical Review B, 2018, 98\penalty0 (23): 235145.
+
+\bibitem[Isakov {\bibetal}(2016)Isakov, Mazzola, Smelyanskiy, Jiang, Boixo,
+  Neven, and Troyer]{isakov2016understanding}
+Isakov~S~V, Mazzola~G, Smelyanskiy~V~N, et~al.
+\newblock Understanding quantum tunneling through quantum monte carlo
+  simulations [J].
+\newblock Physical review letters, 2016, 117\penalty0 (18): 180402.
+
+\bibitem[Jiang {\bibetal}(2017)Jiang, Smelyanskiy, Isakov, Boixo, Mazzola,
+  Troyer, and Neven]{jiang2017scaling}
+Jiang~Z, Smelyanskiy~V~N, Isakov~S~V, et~al.
+\newblock Scaling analysis and instantons for thermally assisted tunneling and
+  quantum monte carlo simulations [J].
+\newblock Physical Review A, 2017, 95\penalty0 (1): 012322.
+
+\bibitem[Kingma {\bibetal}(2014)Kingma and Ba]{kingma2014adam}
+Kingma~D~P, Ba~J.
+\newblock Adam: A method for stochastic optimization [J].
+\newblock arXiv preprint arXiv:1412.6980, 2014.
+
+\bibitem[Liu {\bibetal}(2017)Liu, Qi, Meng, and Fu]{liu2017self}
+Liu~J, Qi~Y, Meng~Z~Y, et~al.
+\newblock Self-learning monte carlo method [J].
+\newblock Physical Review B, 2017, 95\penalty0 (4): 041101.
+
+\bibitem[Mazzola {\bibetal}(2017)Mazzola, Smelyanskiy, and
+  Troyer]{mazzola2017quantum}
+Mazzola~G, Smelyanskiy~V~N, Troyer~M.
+\newblock Quantum monte carlo tunneling from quantum chemistry to quantum
+  annealing [J].
+\newblock Physical Review B, 2017, 96\penalty0 (13): 134305.
+
+\bibitem[Metropolis {\bibetal}(1953)Metropolis, Rosenbluth, Rosenbluth, Teller,
+  and Teller]{metropolis1953equation}
+Metropolis~N, Rosenbluth~A~W, Rosenbluth~M~N, et~al.
+\newblock Equation of state calculations by fast computing machines [J].
+\newblock The journal of chemical physics, 1953, 21\penalty0 (6): 1087-1092.
+
+\bibitem[Nightingale {\bibetal}(2001)Nightingale and
+  Melik-Alaverdian]{nightingale2001optimization}
+Nightingale~M, Melik-Alaverdian~V.
+\newblock Optimization of ground-and excited-state wave functions and van der
+  waals clusters [J].
+\newblock Physical review letters, 2001, 87\penalty0 (4): 043401.
+
+\bibitem[Reynolds {\bibetal}(1982)Reynolds, Ceperley, Alder, and
+  Lester~Jr]{reynolds1982fixed}
+Reynolds~P~J, Ceperley~D~M, Alder~B~J, et~al.
+\newblock Fixed-node quantum monte carlo for moleculesa) b) [J].
+\newblock The Journal of Chemical Physics, 1982, 77\penalty0 (11): 5593-5603.
+
+\bibitem[Saito(2017)]{saito2017solving}
+Saito~H.
+\newblock Solving the bose--hubbard model with machine learning [J].
+\newblock Journal of the Physical Society of Japan, 2017, 86\penalty0 (9):
+  093001.
+
+\bibitem[Saito {\bibetal}(2018)Saito and Kato]{saito2018machine}
+Saito~H, Kato~M.
+\newblock Machine learning technique to find quantum many-body ground states of
+  bosons on a lattice [J].
+\newblock Journal of the Physical Society of Japan, 2018, 87\penalty0 (1):
+  014001.
+
+\bibitem[Santoro {\bibetal}(2002)Santoro, Marton{\'a}k, Tosatti, and
+  Car]{santoro2002theory}
+Santoro~G~E, Marton{\'a}k~R, Tosatti~E, et~al.
+\newblock Theory of quantum annealing of an ising spin glass [J].
+\newblock Science, 2002, 295\penalty0 (5564): 2427-2430.
+
+\bibitem[Scemama {\bibetal}(2006)Scemama and Filippi]{scemama2006simple}
+Scemama~A, Filippi~C.
+\newblock Simple and efficient approach to the optimization of correlated wave
+  functions [J].
+\newblock Physical Review B, 2006, 73\penalty0 (24): 241101.
+
+\bibitem[Sorella(2001)]{sorella2001generalized}
+Sorella~S.
+\newblock Generalized lanczos algorithm for variational quantum monte carlo
+  [J].
+\newblock Physical Review B, 2001, 64\penalty0 (2): 024512.
+
+\bibitem[Sorella(2005)]{sorella2005wave}
+Sorella~S.
+\newblock Wave function optimization in the variational monte carlo method [J].
+\newblock Physical Review B, 2005, 71\penalty0 (24): 241103.
+
+\bibitem[Sorella {\bibetal}(2007)Sorella, Casula, and Rocca]{sorella2007weak}
+Sorella~S, Casula~M, Rocca~D.
+\newblock Weak binding between two aromatic rings: Feeling the van der waals
+  attraction by quantum monte carlo methods [J].
+\newblock The Journal of chemical physics, 2007, 127\penalty0 (1): 014105.
+
+\bibitem[Toulouse {\bibetal}(2007)Toulouse and
+  Umrigar]{toulouse2007optimization}
+Toulouse~J, Umrigar~C~J.
+\newblock Optimization of quantum monte carlo wave functions by energy
+  minimization [J].
+\newblock The Journal of chemical physics, 2007, 126\penalty0 (8): 084102.
+
+\bibitem[Umrigar {\bibetal}(2005)Umrigar and Filippi]{umrigar2005energy}
+Umrigar~C, Filippi~C.
+\newblock Energy and variance optimization of many-body wave functions [J].
+\newblock Physical review letters, 2005, 94\penalty0 (15): 150201.
+
+\bibitem[Umrigar {\bibetal}(1993)Umrigar, Nightingale, and
+  Runge]{umrigar1993diffusion}
+Umrigar~C, Nightingale~M, Runge~K.
+\newblock A diffusion monte carlo algorithm with very small time-step errors
+  [J].
+\newblock The Journal of chemical physics, 1993, 99\penalty0 (4): 2865-2890.
+
+\bibitem[Umrigar {\bibetal}(2007)Umrigar, Toulouse, Filippi, Sorella, and
+  Hennig]{umrigar2007alleviation}
+Umrigar~C, Toulouse~J, Filippi~C, et~al.
+\newblock Alleviation of the fermion-sign problem by optimization of many-body
+  wave functions [J].
+\newblock Physical review letters, 2007, 98\penalty0 (11): 110201.
+
+\end{thebibliography}
