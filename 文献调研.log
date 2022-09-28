@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2022.5.30)  26 SEP 2022 10:40
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2022.5.30)  28 SEP 2022 10:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -231,9 +231,9 @@ Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count273
 )) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Style/ucasthesis.cfg
 File: ucasthesis.cfg 2014/10/01 v1.0 class configuration file
-) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Style/artratex.sty
+) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Style/artratex_文献调研.sty
 
-LaTeX Warning: You have requested package `Style/artratex',
+LaTeX Warning: You have requested package `Style/artratex_文献调研',
                but the package provides `artratex'.
 
 Package: artratex 2014/10/01 v1.0 LaTeX macros package
@@ -1617,6 +1617,8 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip98
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
+Package: backref 2020/01/14 v1.40 Bibliographical back referencing
 )
 Package hyperref Info: Option `psdextra' set `true' on input line 51.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/psdextra.def
@@ -1685,7 +1687,8 @@ LaTeX Info: Redefining \nameref on input line 51.
 \@outlinefile=\write4
 \openout4 = `文献调研.out'.
 
- (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_组合优化.tex
+Package backref Info: ** backref set up for natbib ** on input line 51.
+ (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_退火.tex
 第1章
 
 Package fontspec Warning: Font "FandolHei-Regular" does not contain requested
@@ -1710,55 +1713,66 @@ Package fontspec Info: Font family 'FandolHei-Regular(0)' created for font
 
 
 
-]) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_神经网络.tex [2]
-第2章
-[3
-
-] [4] [5]) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_蒙特卡罗.tex [6]
-第3章
-[7
-
-]
+] [2] [3]
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 12.04628pt on input line 69.
+(Font)              scaled to size 12.04628pt on input line 127.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 9.03471pt on input line 69.
+(Font)              scaled to size 9.03471pt on input line 127.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 7.22777pt on input line 69.
+(Font)              scaled to size 7.22777pt on input line 127.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 12.0437pt on input line 69.
+(Font)              scaled to size 12.0437pt on input line 127.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 9.03278pt on input line 69.
+(Font)              scaled to size 9.03278pt on input line 127.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 7.22623pt on input line 69.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
+(Font)              scaled to size 7.22623pt on input line 127.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 127.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 127.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [8] [9] [10] [11]) [12] (/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.bbl [13
+) [4] [5] [6]) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_神经网络.tex [7] [8
+
+]
+第2章
+[9] [10] [11]) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_蒙特卡罗.tex [12]
+第3章
+[13
+
+] [14] [15] [16] [17] [18] [19]) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_组合优化.tex [20]
+第4章
+) [21
+
+] [22
+
+] (/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.bbl (/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.brf)
+\tf@brf=\write5
+\openout5 = `文献调研.brf'.
+
+ [23
 
 
 
-
-] [14]) [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
+] [24] [25] [26]) [27]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
  (/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 70.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 71.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
 Package rerunfilecheck Info: File `文献调研.out' has not changed.
-(rerunfilecheck)             Checksum: 3EBA9C8E86F9787D933521E50A950710;796.
+(rerunfilecheck)             Checksum: E1602CC86AD1B4B9BF38278D4E9971B8;1015.
+Package rerunfilecheck Info: File `文献调研.brf' has not changed.
+(rerunfilecheck)             Checksum: B7C3A747DA3AB137624CDCB8E8919A2E;4334.
  ) 
 Here is how much of TeX's memory you used:
- 37083 strings out of 479819
- 733806 string characters out of 5895846
- 1124965 words of memory out of 5000000
- 53584 multiletter control sequences out of 15000+600000
- 536524 words of font info for 83 fonts, out of 8000000 for 9000
+ 37600 strings out of 479819
+ 746605 string characters out of 5895846
+ 1130182 words of memory out of 5000000
+ 54086 multiletter control sequences out of 15000+600000
+ 536743 words of font info for 89 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 76i,11n,115p,970b,2933s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,11n,115p,975b,2933s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.xdv (15 pages, 188104 bytes).
+Output written on /D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.xdv (27 pages, 346512 bytes).
