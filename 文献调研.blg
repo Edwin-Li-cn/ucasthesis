@@ -13,45 +13,45 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Biblio/ref.bib
 Warning--I didn't find a database entry for ""
 Warning--empty journal in hastings1970monte
-You've used 72 entries,
+You've used 83 entries,
             5319 wiz_defined-function locations,
-            1467 strings with 19642 characters,
-and the built_in function-call counts, 564080 in all, are:
-= -- 10632
-> -- 66982
-< -- 82734
-+ -- 22452
-- -- 4130
-* -- 3919
-:= -- 77415
-add.period$ -- 216
-call.type$ -- 72
-change.case$ -- 434
-chr.to.int$ -- 20447
-cite$ -- 145
-duplicate$ -- 1478
-empty$ -- 4095
-format.name$ -- 2183
-if$ -- 146266
-int.to.chr$ -- 74
+            1525 strings with 21748 characters,
+and the built_in function-call counts, 661538 in all, are:
+= -- 12394
+> -- 78670
+< -- 97129
++ -- 26357
+- -- 4859
+* -- 4574
+:= -- 90792
+add.period$ -- 249
+call.type$ -- 83
+change.case$ -- 512
+chr.to.int$ -- 24006
+cite$ -- 167
+duplicate$ -- 1705
+empty$ -- 4721
+format.name$ -- 2562
+if$ -- 171487
+int.to.chr$ -- 85
 int.to.str$ -- 1
 missing$ -- 0
-newline$ -- 376
-num.names$ -- 288
-pop$ -- 30947
+newline$ -- 431
+num.names$ -- 332
+pop$ -- 36263
 preamble$ -- 1
-purify$ -- 362
+purify$ -- 429
 quote$ -- 0
-skip$ -- 58506
+skip$ -- 68697
 stack$ -- 0
-substring$ -- 25230
+substring$ -- 29591
 swap$ -- 2
-text.length$ -- 1014
+text.length$ -- 1184
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1216
+type$ -- 1403
 warning$ -- 1
-while$ -- 1390
+while$ -- 1618
 width$ -- 0
-write$ -- 1072
+write$ -- 1233
 (There were 2 warnings)

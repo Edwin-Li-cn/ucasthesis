@@ -1,4 +1,4 @@
-\begin{thebibliography}{72}
+\begin{thebibliography}{83}
 \providecommand{\biband}{和}
 \providecommand{\bibetal}{等}
 \providecommand{\natexlab}[1]{#1}
@@ -19,6 +19,13 @@ Aharonov~D, Van~Dam~W, Kempe~J, et~al.
 \newblock Adiabatic quantum computation is equivalent to standard quantum
   computation [J].
 \newblock SIAM review, 2008, 50\penalty0 (4): 755-787.
+
+\bibitem[Altshuler {\bibetal}(2010)Altshuler, Krovi, and
+  Roland]{altshuler2010anderson}
+Altshuler~B, Krovi~H, Roland~J.
+\newblock Anderson localization makes adiabatic quantum optimization fail [J].
+\newblock Proceedings of the National Academy of Sciences, 2010, 107\penalty0
+  (28): 12446-12450.
 
 \bibitem[Anderson(1975)]{anderson1975random}
 Anderson~J~B.
@@ -47,6 +54,12 @@ Boixo~S, R{\o}nnow~T~F, Isakov~S~V, et~al.
 Boninsegni~M, Moroni~S.
 \newblock Population size bias in diffusion monte carlo [J].
 \newblock Physical Review E, 2012, 86\penalty0 (5): 056712.
+
+\bibitem[Brady {\bibetal}(2016)Brady and van Dam]{brady2016quantum}
+Brady~L~T, van Dam~W.
+\newblock Quantum monte carlo simulations of tunneling in quantum adiabatic
+  optimization [J].
+\newblock Physical Review A, 2016, 93\penalty0 (3): 032304.
 
 \bibitem[Bravyi(2015)]{bravyi2015simulacion}
 Bravyi~S.
@@ -126,6 +139,12 @@ Ceperley~D, Alder~B.
 \newblock Quantum monte carlo [J].
 \newblock Science, 1986, 231\penalty0 (4738): 555-560.
 
+\bibitem[Denchev {\bibetal}(2016)Denchev, Boixo, Isakov, Ding, Babbush,
+  Smelyanskiy, Martinis, and Neven]{denchev2016computational}
+Denchev~V~S, Boixo~S, Isakov~S~V, et~al.
+\newblock What is the computational value of finite-range tunneling? [J].
+\newblock Physical Review X, 2016, 6\penalty0 (3): 031015.
+
 \bibitem[Duchi {\bibetal}(2011)Duchi, Hazan, and Singer]{duchi2011adaptive}
 Duchi~J, Hazan~E, Singer~Y.
 \newblock Adaptive subgradient methods for online learning and stochastic
@@ -161,6 +180,13 @@ Farhi~E, Goldstone~J, Gutmann~S.
 \newblock Quantum adiabatic evolution algorithms versus simulated annealing
   [J].
 \newblock arXiv preprint quant-ph/0201031, 2002.
+
+\bibitem[Farhi {\bibetal}(2012)Farhi, Gosset, Hen, Sandvik, Shor, Young, and
+  Zamponi]{farhi2012performance}
+Farhi~E, Gosset~D, Hen~I, et~al.
+\newblock Performance of the quantum adiabatic algorithm on random instances of
+  two optimization problems on regular hypergraphs [J].
+\newblock Physical Review A, 2012, 86\penalty0 (5): 052334.
 
 \bibitem[Finnila {\bibetal}(1994)Finnila, Gomez, Sebenik, Stenson, and
   Doll]{finnila1994quantum}
@@ -267,6 +293,11 @@ Jansen~S, Ruskai~M~B, Seiler~R.
   computation [J].
 \newblock Journal of Mathematical Physics, 2007, 48\penalty0 (10): 102111.
 
+\bibitem[Jarret {\bibetal}(2015)Jarret and Jordan]{jarret2015adiabatic}
+Jarret~M, Jordan~S~P.
+\newblock Adiabatic optimization without local minima [J].
+\newblock Quantum Information \& Computation, 2015, 15\penalty0 (3-4): 181-199.
+
 \bibitem[Jarret {\bibetal}(2016)Jarret, Jordan, and
   Lackey]{jarret2016adiabatic}
 Jarret~M, Jordan~S~P, Lackey~B.
@@ -285,6 +316,13 @@ Kadowaki~T, Nishimori~H.
 \newblock Quantum annealing in the transverse ising model [J].
 \newblock Physical Review E, 1998, 58\penalty0 (5): 5355.
 
+\bibitem[King {\bibetal}(2015)King, Yarkoni, Nevisi, Hilton, and
+  McGeoch]{king2015benchmarking}
+King~J, Yarkoni~S, Nevisi~M~M, et~al.
+\newblock Benchmarking a quantum annealing processor with the time-to-target
+  metric [J].
+\newblock arXiv preprint arXiv:1508.05087, 2015.
+
 \bibitem[Kingma {\bibetal}(2014)Kingma and Ba]{kingma2014adam}
 Kingma~D~P, Ba~J.
 \newblock Adam: A method for stochastic optimization [J].
@@ -295,6 +333,12 @@ Kingma~D~P, Ba~J.
 Kirkpatrick~S, Gelatt~Jr~C~D, Vecchi~M~P.
 \newblock Optimization by simulated annealing [J].
 \newblock science, 1983, 220\penalty0 (4598): 671-680.
+
+\bibitem[Knysh(2016)]{knysh2016zero}
+Knysh~S.
+\newblock Zero-temperature quantum annealing bottlenecks in the spin-glass
+  phase [J].
+\newblock Nature communications, 2016, 7\penalty0 (1): 1-9.
 
 \bibitem[Lee {\bibetal}(2000)Lee and Berne]{lee2000global}
 Lee~Y~H, Berne~B.
@@ -308,10 +352,23 @@ Lee~Y~H, Berne~B.
   frustrated model protein [J].
 \newblock The Journal of Physical Chemistry A, 2001, 105\penalty0 (2): 459-464.
 
+\bibitem[Liu {\bibetal}(2015)Liu, Polkovnikov, and Sandvik]{liu2015quantum}
+Liu~C~W, Polkovnikov~A, Sandvik~A~W.
+\newblock Quantum versus classical annealing: Insights from scaling theory and
+  results for spin glasses on 3-regular graphs [J].
+\newblock Physical Review Letters, 2015, 114\penalty0 (14): 147203.
+
 \bibitem[Liu {\bibetal}(2017)Liu, Qi, Meng, and Fu]{liu2017self}
 Liu~J, Qi~Y, Meng~Z~Y, et~al.
 \newblock Self-learning monte carlo method [J].
 \newblock Physical Review B, 2017, 95\penalty0 (4): 041101.
+
+\bibitem[Marto{\v{n}}{\'a}k {\bibetal}(2002)Marto{\v{n}}{\'a}k, Santoro, and
+  Tosatti]{martovnak2002quantum}
+Marto{\v{n}}{\'a}k~R, Santoro~G~E, Tosatti~E.
+\newblock Quantum annealing by the path-integral monte carlo method: The
+  two-dimensional random ising model [J].
+\newblock Physical Review B, 2002, 66\penalty0 (9): 094203.
 
 \bibitem[Mazzola {\bibetal}(2017)Mazzola, Smelyanskiy, and
   Troyer]{mazzola2017quantum}
@@ -352,6 +409,12 @@ Reynolds~P~J, Ceperley~D~M, Alder~B~J, et~al.
 \newblock Fixed-node quantum monte carlo for moleculesa) b) [J].
 \newblock The Journal of Chemical Physics, 1982, 77\penalty0 (11): 5593-5603.
 
+\bibitem[R{\o}nnow {\bibetal}(2014)R{\o}nnow, Wang, Job, Boixo, Isakov, Wecker,
+  Martinis, Lidar, and Troyer]{ronnow2014defining}
+R{\o}nnow~T~F, Wang~Z, Job~J, et~al.
+\newblock Defining and detecting quantum speedup [J].
+\newblock science, 2014, 345\penalty0 (6195): 420-424.
+
 \bibitem[Saito(2017)]{saito2017solving}
 Saito~H.
 \newblock Solving the bose--hubbard model with machine learning [J].
@@ -390,6 +453,11 @@ Schmidt~K, Niyaz~P, Vaught~A, et~al.
 \newblock Green’s function monte carlo method with exact imaginary-time
   propagation [J].
 \newblock Physical Review E, 2005, 71\penalty0 (1): 016707.
+
+\bibitem[Smolin {\bibetal}(2014)Smolin and Smith]{smolin2014classical}
+Smolin~J~A, Smith~G.
+\newblock Classical signature of quantum annealing [J].
+\newblock Frontiers in physics, 2014, 2: 52.
 
 \bibitem[Sorella(2001)]{sorella2001generalized}
 Sorella~S.
