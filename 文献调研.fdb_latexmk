@@ -1,19 +1,19 @@
 # Fdb version 3
-["bibtex 文献调研"] 1664355848 "文献调研.aux" "文献调研.bbl" "文献调研" 1664355850
+["bibtex 文献调研"] 1665068919 "文献调研.aux" "文献调研.bbl" "文献调研" 1665068922
   "./Biblio/gbt7714-author-year.bst" 1662700091 45318 ab5d712c6266394d1a26a25b63f46551 ""
-  "Biblio/ref.bib" 1664350269 27164 e667fd735eacb74610316114de284f2b ""
-  "文献调研.aux" 1664355850 20032 d275ac092581b01b73ebab167b6d2919 "xelatex"
+  "Biblio/ref.bib" 1665068770 33769 5fb081d95517e3988ca8562d63e4e197 ""
+  "文献调研.aux" 1665068921 24845 d00243e7543d98dea8b547f52abc5c95 "xelatex"
   (generated)
-  "文献调研.bbl"
   "文献调研.blg"
-["xdvipdfmx"] 1664355850 "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.xdv" "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.pdf" "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研" 1664355850
-  "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.xdv" 1664355850 406176 f0c1b123f29df0810e5d24a12d14daf6 "xelatex"
+  "文献调研.bbl"
+["xdvipdfmx"] 1665068921 "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.xdv" "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.pdf" "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研" 1665068922
+  "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.xdv" 1665068921 550308 59eea164328401a439ef7f78a09583b0 "xelatex"
   (generated)
   "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.pdf"
-["xelatex"] 1664355848 "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.tex" "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.xdv" "文献调研" 1664355850
-  "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.aux" 1664355850 20032 d275ac092581b01b73ebab167b6d2919 ""
-  "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.tex" 1664331822 3635 6ed4342f4c5fb3f8ba874caaf1af950d ""
-  "/dev/null" 1664327699 0 d41d8cd98f00b204e9800998ecf8427e ""
+["xelatex"] 1665068919 "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.tex" "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.xdv" "文献调研" 1665068922
+  "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.aux" 1665068921 24845 d00243e7543d98dea8b547f52abc5c95 ""
+  "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.tex" 1664448518 3641 a8bcff3b922a7ff5ba8070e69273b5af ""
+  "/dev/null" 1665028920 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1650440839 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -211,20 +211,20 @@
   "Style/artratex_文献调研.sty" 1664331786 35216 34fb34c113260b98f27023468b40bf3f ""
   "Style/ucasthesis.cfg" 1662700091 6669 6d809a8dcf98ea6a966acbc0d0816e71 ""
   "Style/ucasthesis.cls" 1662700091 26659 8f795c3ca3adaf363a6999b132426983 ""
-  "Tex/文献调研_神经网络.tex" 1664179223 8838 cb973eb01a3ab5f91cb5b2ad2e936536 ""
-  "Tex/文献调研_组合优化.tex" 1664255254 1149 81779ad42862e5b1e833221f67437c87 ""
-  "Tex/文献调研_蒙特卡罗.tex" 1664355845 12986 f835e6d4f9cbc3a804352563c1dc8686 ""
-  "Tex/文献调研_退火.tex" 1664355845 19873 6e51fb16d34d97232465d5adb5e1012d ""
-  "文献调研.aux" 1664355850 20032 d275ac092581b01b73ebab167b6d2919 "xelatex"
-  "文献调研.bbl" 1664355848 22342 3ab133c0d88d18c41d6c64f1235bb6d5 "bibtex 文献调研"
-  "文献调研.brf" 1664355850 5025 729efe6aba09b00fdcf38404c3de7451 "xelatex"
-  "文献调研.out" 1664355850 1015 e1602cc86ad1b4b9bf38278d4e9971b8 "xelatex"
-  "文献调研.tex" 1664331822 3635 6ed4342f4c5fb3f8ba874caaf1af950d ""
+  "Tex/文献调研_神经网络.tex" 1665046378 9706 2025b71747b3d34a7f30218d14e08d10 ""
+  "Tex/文献调研_组合优化.tex" 1664446451 1545 ad2c28b5da74ccf8973ab6aa6895cde9 ""
+  "Tex/文献调研_蒙特卡罗.tex" 1665068702 15138 58cf779a50da31cbf45e379c37139aa1 ""
+  "Tex/文献调研_量子优化.tex" 1665068916 34279 c42af78e544fdad93239308edd66a738 ""
+  "文献调研.aux" 1665068921 24845 d00243e7543d98dea8b547f52abc5c95 "xelatex"
+  "文献调研.bbl" 1665068919 28149 9ff1e3e63e4f9d7fdf204b6e60b53b31 "bibtex 文献调研"
+  "文献调研.brf" 1665068921 6519 03710742bf05e263e7c9856b61ec1b53 "xelatex"
+  "文献调研.out" 1665068921 952 885491675d6b31d70077bcefc01d0f38 "xelatex"
+  "文献调研.tex" 1664448518 3641 a8bcff3b922a7ff5ba8070e69273b5af ""
   (generated)
-  "文献调研.brf"
   "文献调研.aux"
+  "文献调研.brf"
   "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.xdv"
-  "文献调研.log"
-  "文献调研.xdv"
   "/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.log"
+  "文献调研.log"
   "文献调研.out"
+  "文献调研.xdv"

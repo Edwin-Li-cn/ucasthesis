@@ -1,6 +1,5 @@
-\chapter{退火相关文献}
-\section{退火相关：方向接近}
-\subsection{}
+\chapter{量子优化相关文献}
+\section{量子优化相关：PQMC/VMC}
     \begin{enumerate}
         \item \citet{finnila1994quantum}：
             \begin{itemize}
@@ -11,54 +10,98 @@
                 \item 影响力：引用次数：669。
                 \item 相关代码：
             \end{itemize}
-            \item \citet{inack2015simulated}：
+            \item \citet{stella2005optimization}：
             \begin{itemize}
-                \item 工作内容概述：
-                \item 课题相关性：
-                \item 核心创新点：
-                \item 先进性：
-                \item 影响力：引用次数：18。
+                \item 工作内容概述：在简单问题（一维双势阱、抛物线势阱、弯曲波浪势阱）上，解析的对虚时间、真实时间演化的量子退火过程和经典拟退火过程进行了对比，表明经典拟退火仅受到局域较小值势垒高度的影响；而量子退火受到问题本征值结构的影响（小的朗道泽纳间隙、高的势垒）。
+                同时指出在退火过程中，虚时间演化的薛定谔方程和真实演化的薛定谔方程是等价的，甚至于虚时间演化得到基态的方式更高效。
+                \item 课题相关性：基于虚时间演化薛定谔方程的量子退火过程分析；
+                \item 核心创新点：简单问题上，解析的对比分析了虚时间、真实时间演化的量子退火过程和经典拟退火过程。
+                \item 先进性：虚时间演化的薛定谔方程甚至比真实时间演化方式更为有效。
+                \item 影响力：引用次数：66。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{morita2006convergence}：
+            \begin{itemize}
+                \item 工作内容概述：通过理论分析指出，在基于格林函数蒙特卡罗方法和路径积分蒙特卡罗方法的模拟量子退火过程中，横向场场强遵循$\Gamma(t)\approx \text{const}/t^c \quad c\approx \mathcal{O}(1/N)$下降可以确保马尔科夫链的各态经历性以及收敛于基态。
+                该下降速度快于经典拟退火中温度所需的下降速度：$T(t)\approx N/\log t$。但需声明：该退火准则下，演化时间随着系统规模指数增加，因此没有解决NP问题。
+                \item 课题相关性：基于格林函数蒙特卡罗方法和路径积分蒙特卡罗方法的模拟量子退火准则。
+                \item 核心创新点：理论分析给出，确保基于PIMC和GFMC的模拟量子退火收敛于基态所需的退火准则。
+                \item 先进性：基于PIMC和GFMC的模拟量子退火过程中，横向场场强下降速率可以快于经典拟退火过程中温度所需的下降速度。
+                \item 影响力：引用次数：61。
                 \item 相关代码：
             \end{itemize}
         \item \citet{santoro2006optimization}：
         \begin{itemize}
-            \item 工作内容概述：
-            \item 课题相关性：
-            \item 核心创新点：
-            \item 先进性：
+            \item 工作内容概述：对近年来量子退火（量子绝热计算）领域的工作进行细致总结。根据\citet{stella2005optimization}的工作，在有序、无序的简单模型上对量子退火和经典拟退火进行了细致的解析分析。着重讨论了无序以及朗道泽纳隧穿现象对量子退火的影响。
+            介绍了近年来基于PIMC、GFMC的模拟量子退火和量子退火（解析求解、实验实现）在组合优化问题上的应用。
+            \item 课题相关性：GFMC；量子退火的局限性；量子退火早期应用。
+            \item 核心创新点：对近年来量子退火（量子绝热计算）领域的工作进行细致总结。
+            \item 先进性：量子退火会受到无序以及朗道泽纳隧穿现象的严重影响。
             \item 影响力：引用次数：344。
             \item 相关代码：
         \end{itemize}
         \item \citet{stella2007quantum}：
             \begin{itemize}
-                \item 工作内容概述：
-                \item 课题相关性：
-                \item 核心创新点：
-                \item 先进性：基于格林函数蒙特卡罗方法的模拟量子退火在没有可靠的引导波函数情况下，要劣于基于路径积分蒙特卡罗方法的模拟量子退火。
+                \item 工作内容概述：在横向场伊辛模型上对基于格林函数蒙特卡罗方法（玻尔兹曼试探波函数）、路径积分蒙特卡罗方法的模拟量子退火和经典拟退火进行了对比，得出结论：GFMC只有在有优良的引导波函数情况下，才有可能优于PIMC。
+                \item 课题相关性：有引导波函数的格林函数蒙特卡罗方法模拟量子退火。
+                \item 核心创新点：将玻尔兹曼试探波函数作为GFMC模拟量子退火的引导波函数，与PIMC、CA进行对比。
+                \item 先进性：在横向场伊辛模型上，基于格林函数蒙特卡罗方法的模拟量子退火在没有可靠的引导波函数情况下，要劣于基于路径积分蒙特卡罗方法的模拟量子退火。
                 \item 影响力：引用次数：22。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{inack2015simulated}：
+            \begin{itemize}
+                \item 工作内容概述：在连续模型（对称、非对称双势阱；有序、无序的复杂势阱）上对基于DMC、PIMC的模拟量子退火和经典拟退火进行了对比，其中DMC采用了固定不变的玻尔兹曼引导波函数。
+                得出结论：PQMC用于模拟量子退火优于有限温度的PIMC，并且更不容易受局部较小值的影响，表现更为稳定。
+                \item 课题相关性：有引导波函数的扩散蒙特卡罗方法模拟量子退火求解连续模型。
+                \item 核心创新点：在连续模型上对基于DMC、PIMC的模拟量子退火和经典拟退火进行了对比，显示出了DMC的优越性。
+                \item 先进性：在简单的连续模型上，PQMC用于模拟量子退火优于有限温度的PIMC，并且更不容易受局部较小值的影响，表现更为稳定。
+                \item 影响力：引用次数：18。
                 \item 相关代码：
             \end{itemize}
         \item \citet{jarret2016adiabatic}：
             \begin{itemize}
-                \item 工作内容概述：
-                \item 课题相关性：SSMC属于PQMC；MAX-k-SAT
-                \item 核心创新点：
-                \item 先进性：
+                \item 工作内容概述：提出一种扩散蒙特卡罗方法的变体-次随机蒙特卡罗方法（SSMC），用以求解MAX-k-SAT问题，取得了一定的效果；
+                指出扩散蒙特卡罗方法中，walker分布收敛于$p_{s}^{(1)}(x)=\psi_{s}(x)/\sum_{y\in V}\psi_{s}(y)$，而在绝热演化过程中，通过多次测量得到的概率分布应为$p_{s}^{(2)}(x)=\psi_{s}^{2}(x)$，二者的区别会导致
+                在一些情况下DMC不能有效的模拟绝热演化过程。
+                \item 课题相关性：DMC求解MAX-k-SAT；DMC模拟量子绝热演化过程的局限性。
+                \item 核心创新点：DMC变体SSMC求解组合优化问题；类似于\citet{hastings2013obstructions}指出PIMC在某些问题上受限于拓扑阻碍不能有效模拟量子绝热演化，指出DMC由于收敛分布的不同，在在某些问题上同样不能有效模拟量子绝热演化。
+                \item 先进性：无引导波函数DMC的简化变体-SSMC。
                 \item 影响力：引用次数：42。
+                \item 相关代码：提供了C代码。
+            \end{itemize}
+            \item \citet{bringewatt2018diffusion}：
+            \begin{itemize}
+                \item 工作内容概述：在\citet{jarret2016adiabatic}工作基础上进一步指出，即便在局域（6体）哈密顿量的情况下，扩散蒙特卡罗方法仍不能有效地对量子绝热优化过程进行模拟。
+                \item 课题相关性：DMC模拟量子绝热演化过程的局限性。
+                \item 核心创新点：在局域（6体）哈密顿量的情况下，对DMC模拟量子绝热优化过程的能力进行了分析测试。
+                \item 先进性：无引导波函数DMC不能有效地对量子绝热优化过程进行模拟。
+                \item 影响力：引用次数：10。
                 \item 相关代码：
             \end{itemize}
+            \item \citet{hibat2021variational}：
+            \begin{itemize}
+                \item 工作内容概述：用循环神经网络（RNN）表征经典（量子）系统态，在经典和量子两种体系下的绝热演化环境中，采用变分方法对RNN进行优化（VCA, VQA）。该方法论在伊辛自旋模型上进行了测试，结果表明VCA优于SA和VQA。
+                \item 课题相关性：神经网络表示量子态，并用变分法进行优化，寻找系统基态。
+                \item 核心创新点：用循环神经网络（RNN）表征经典（量子）系统态，采用变分方法在退火过程中予以优化，求解系统基态。
+                \item 先进性：结果表明提出的VCA优于传统的SA。
+                \item 影响力：引用次数：17。
+                \item 相关代码：提供了开源python代码。
+            \end{itemize}
+
+            \item \citet{khandoker2022supplementing}：
+            \begin{itemize}
+                \item 工作内容概述：将\citet{hibat2021variational}提出的VCA用于求解组合优化问题（Max-Cut, NSP, TSP），并与SA进行了对比。结果表明，VCA优于SA。
+                \item 课题相关性：变分法优化神经网络表示的量子态，用以求解组合优化问题。
+                \item 核心创新点：VCA求解经典组合优化问题。
+                \item 先进性：退火过程足够缓慢的情况下，VCA优于SA
+                \item 影响力：引用次数：0。
+                \item 相关代码：提供了开源python代码。
+            \end{itemize}
     \end{enumerate}
-\section{退火相关：方向较远}
+
+\section{量子优化相关：方向较远}
 \begin{enumerate}
-    \item \citet{kirkpatrick1983optimization}：
-        \begin{itemize}
-            \item 工作内容概述：
-            \item 课题相关性：
-            \item 核心创新点：
-            \item 先进性：
-            \item 影响力：引用次数：53969。
-            \item 相关代码：
-        \end{itemize}
         \item \citet{kadowaki1998quantum}：
             \begin{itemize}
                 \item 工作内容概述：在小系统上对多种横向场伊辛模型的含时薛定谔方程进行了数值求解以获得量子退火结果，与经典的拟退火结果进行对比，最终表明量子退火到达基态的概率高于经典拟退火。
@@ -71,45 +114,45 @@
         \item \citet{brooke1999quantum}：
             \begin{itemize}
                 \item 工作内容概述：实验上对量子退火和经典退火在无序磁铁模型上进行了对比，表明量子退火得到的态更接近于基态。
-                \item 课题相关性：实验上实现了量子退火。
-                \item 核心创新点：实验上实现了量子退火。
+                \item 课题相关性：实验上实现量子退火。
+                \item 核心创新点：实验上实现量子退火。
                 \item 先进性：在该实验模型上表明量子退火优于经典退火。
                 \item 影响力：引用次数：553。
                 \item 相关代码：
             \end{itemize}
             \item \citet{lee2000global}：
             \begin{itemize}
-                \item 工作内容概述：
-                \item 课题相关性：
-                \item 核心创新点：
-                \item 先进性：
-                \item 影响力：引用次数：
+                \item 工作内容概述：提出基于路径积分蒙特卡罗方法的量子热退火（QTA-PIMC），在\citet{honeycutt1992nature}提出的BLN蛋白质模型上进行了测试，与经典拟退火（SA）进行了比较，表明QTA-PIMC优于SA。
+                \item 课题相关性：PIMC实现模拟量子退火。
+                \item 核心创新点：提出基于路径积分蒙特卡罗方法的量子热退火（QTA-PIMC）
+                \item 先进性：传统的SA是QTA-PIMC的子集，QTA-PIMC在大系统上表现更佳。
+                \item 影响力：引用次数：140。
                 \item 相关代码：
             \end{itemize}
         \item \citet{farhi2000quantum}：
         \begin{itemize}
-            \item 工作内容概述：提出基于路径积分蒙特卡罗方法的量子热退火（QTA-PIMC），在\citet{honeycutt1992nature}提出的BLN蛋白质模型上进行了测试，与经典拟退火（SA）进行了比较，表明QTA-PIMC优于SA。
-            \item 课题相关性：PIMC实现模拟量子退火。
-            \item 核心创新点：提出基于路径积分蒙特卡罗方法的量子热退火（QTA-PIMC）
-            \item 先进性：传统的SA是QTA-PIMC的子集，QTA-PIMC在大系统上表现更佳。
+            \item 工作内容概述：利用量子绝热算法，解析求解可满足性问题。给出了演化时间和最小能级的关系$T\gg g_{\text{min}}^{-2}$。提供了几个绝热算法能在线性时间内求解的可满足性问题。
+            \item 课题相关性：量子绝热算法解析求解组合优化问题；绝热演化时间和最小能级的关系。
+            \item 核心创新点：证明利用量子绝热算法可以在线性时间内，求解部分可满足性问题。
+            \item 先进性：量子绝热算法可在线性时间内解决某些可满足性问题。
             \item 影响力：引用次数：1297。
             \item 相关代码：
         \end{itemize}
         \item \citet{lee2001quantum}：
             \begin{itemize}
-                \item 工作内容概述：
+                \item 工作内容概述：基于路径积分蒙特卡罗方法的思想，提出重整化量子热退火（QTAR），在阻挫BLN蛋白质模型上进行了测试，得到了百分百成功率。
                 \item 课题相关性：PIMC实现模拟量子退火。
-                \item 核心创新点：
-                \item 先进性：
+                \item 核心创新点：基于路径积分蒙特卡罗方法的思想，提出重整化量子热退火（QTAR）。
+                \item 先进性：在阻挫BLN蛋白质模型上，优于经典拟退火。
                 \item 影响力：引用次数：28。
                 \item 相关代码：
             \end{itemize}
             \item \citet{brooke2001tunable}：
             \begin{itemize}
-                \item 工作内容概述：
-                \item 课题相关性：
-                \item 核心创新点：
-                \item 先进性：
+                \item 工作内容概述：构建了一个可以调整量子隧穿几率的无序磁化系统，得以在同一个框架下对经典热退火过程和量子退火进行试验。
+                \item 课题相关性：实验上实现可调节隧穿几率的铁磁体系统，可用于量子退火。
+                \item 核心创新点：实验上实现可调节隧穿几率的铁磁体系统。
+                \item 先进性：实验上实现可调节隧穿几率的铁磁体系统。
                 \item 影响力：引用次数：151。
                 \item 相关代码：
             \end{itemize}
@@ -150,13 +193,67 @@
                 \item 影响力：引用次数：666。
                 \item 相关代码：
             \end{itemize}
-            \item \citet{bravyi2006complexity}：
+            \item \citet{liu2003quantum}：
             \begin{itemize}
                 \item 工作内容概述：
                 \item 课题相关性：
                 \item 核心创新点：
                 \item 先进性：
+                \item 影响力：引用次数：45。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{martovnak2004quantum}：
+            \begin{itemize}
+                \item 工作内容概述：
+                \item 课题相关性：基于PIMC的模拟量子退火；旅行商问题（TSP）
+                \item 核心创新点：
+                \item 先进性：
+                \item 影响力：引用次数：198。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{battaglia2005optimization}：
+            \begin{itemize}
+                \item 工作内容概述：对基于局部更新路径积分蒙特卡罗方法的模拟量子退火和经典拟退火在困难的（10000子句）可满足性问题上进行了对比，结果表明基于局部更新PIMC的模拟量子退火远不如经典拟退火。
+                \item 课题相关性：基于PIMC的模拟量子退火；3-SAT。
+                \item 核心创新点：在困难的（10000子句）可满足性问题上对基于PIMC的模拟量子退火进行了测试。
+                \item 先进性：在困难的3-SAT问题中，基于局部更新PIMC的模拟量子退火不如经典拟退火。
+                \item 影响力：引用次数：128。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{gregor2005minimization}：
+            \begin{itemize}
+                \item 工作内容概述：
+                \item 课题相关性：
+                \item 核心创新点：
+                \item 先进性：
+                \item 影响力：引用次数：21。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{sarjala2006optimization}：
+            \begin{itemize}
+                \item 工作内容概述：
+                \item 课题相关性：
+                \item 核心创新点：
+                \item 先进性：
+                \item 影响力：引用次数：21。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{bravyi2006complexity}：
+            \begin{itemize}
+                \item 工作内容概述：
+                \item 课题相关性：由佩龙-弗罗宾尼斯定理可知，stoquastic哈密顿量的基态总可以表示为仅含非负模的本征向量。
+                \item 核心创新点：
+                \item 先进性：
                 \item 影响力：引用次数：257。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{stella2006monte}：
+            \begin{itemize}
+                \item 工作内容概述：
+                \item 课题相关性：基于PIMC的模拟量子退火；双势阱问题。
+                \item 核心创新点：在双势阱问题中分析了PIMC中不可避免的有限温度、采样困难所导致的低效性。
+                \item 先进性：
+                \item 影响力：引用次数：25。
                 \item 相关代码：
             \end{itemize}
             \item \citet{jansen2007bounds}：
@@ -177,6 +274,15 @@
                 \item 影响力：引用次数：653。
                 \item 相关代码：
             \end{itemize}
+            \item \citet{amin2009first}：
+            \begin{itemize}
+                \item 工作内容概述：
+                \item 课题相关性：
+                \item 核心创新点：
+                \item 先进性：
+                \item 影响力：引用次数：96。
+                \item 相关代码：
+            \end{itemize}
             \item \citet{bravyi2010complexity}：
             \begin{itemize}
                 \item 工作内容概述：
@@ -193,6 +299,24 @@
                 \item 核心创新点：
                 \item 先进性：
                 \item 影响力：引用次数：226。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{farhi2011quantum}：
+            \begin{itemize}
+                \item 工作内容概述：
+                \item 课题相关性：
+                \item 核心创新点：
+                \item 先进性：
+                \item 影响力：引用次数：84。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{johnson2011quantum}：
+            \begin{itemize}
+                \item 工作内容概述：
+                \item 课题相关性：
+                \item 核心创新点：
+                \item 先进性：
+                \item 影响力：引用次数：1567。
                 \item 相关代码：
             \end{itemize}
             \item \citet{farhi2012performance}：
@@ -220,6 +344,15 @@
                 \item 核心创新点：构造了基于路径积分蒙特卡罗方法的模拟量子退火的受限模型。
                 \item 先进性：指出了路径积分蒙特卡罗的局限性，在该类模型上量子绝热优化可能指数级优于PIMC。
                 \item 影响力：引用次数：55。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{farhi2014quantum}：
+            \begin{itemize}
+                \item 工作内容概述：
+                \item 课题相关性：
+                \item 核心创新点：
+                \item 先进性：
+                \item 影响力：引用次数：1531。
                 \item 相关代码：
             \end{itemize}
             \item \citet{boixo2014evidence}：
@@ -313,6 +446,15 @@
                 \item 影响力：引用次数：32。
                 \item 相关代码：
             \end{itemize}
+            \item \citet{andriyash2017can}：
+            \begin{itemize}
+                \item 工作内容概述：声明由于拓扑障碍，路径积分蒙特卡罗方法不能有效地对三叶草模型中的非相干量子隧穿过程进行模拟，因此量子退火机有可能实现量子加速。
+                \item 课题相关性：
+                \item 核心创新点：
+                \item 先进性：
+                \item 影响力：引用次数：22。
+                \item 相关代码：
+            \end{itemize}
         \item \citet{hibat2021variational}：
             \begin{itemize}
                 \item 工作内容概述：
@@ -320,6 +462,33 @@
                 \item 核心创新点：
                 \item 先进性：
                 \item 影响力：引用次数：17。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{bapat2021approximate}：
+            \begin{itemize}
+                \item 工作内容概述：
+                \item 课题相关性：
+                \item 核心创新点：
+                \item 先进性：
+                \item 影响力：引用次数：2。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{brady2021optimal}：
+            \begin{itemize}
+                \item 工作内容概述：
+                \item 课题相关性：
+                \item 核心创新点：
+                \item 先进性：
+                \item 影响力：引用次数：61。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{crosson2021prospects}：
+            \begin{itemize}
+                \item 工作内容概述：
+                \item 课题相关性：
+                \item 核心创新点：
+                \item 先进性：
+                \item 影响力：引用次数：55。
                 \item 相关代码：
             \end{itemize}
             \item \citet{inack2022neural}：

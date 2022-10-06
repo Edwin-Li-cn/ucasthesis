@@ -1,5 +1,5 @@
 \chapter{神经网络相关文献}
-\section{神经网络相关：方向接近}
+\section{神经网络相关：RBM}
     \begin{enumerate}
         \item \citet{carleo2017solving}：
             \begin{itemize}
@@ -7,10 +7,18 @@
                 \item 课题相关性：基于RBM的VMC方法求解量子系统的基态；基于时间依赖的VMC方法优化参数含时的RBM也是一种模拟量子退火的方法。
                 \item 核心创新点：RBM表示量子多体系统波函数
                 \item 先进性：作者声明在这个研究案例上，随机重配法优于\citet{harju1997stochastic}所采用的随机梯度下降法。
-                \item 影响力：引用次数：1580。用RBM表示量子多体系统的权威文章，发表在science，相关领域基本都会引用。
+                \item 影响力：引用次数：1592。用RBM表示量子多体系统的权威文章，发表在science，相关领域基本都会引用。
                 \item 相关代码：提供开源代码C++格式，github上有很多复现工作。
             \end{itemize}
-
+            \item \citet{pilati2019self}：
+            \begin{itemize}
+                \item 工作内容概述：采用受限玻尔兹曼机当做PQMC的引导波函数，用非监督机器学习的方法在虚时间演化的过程中，利用walker分布不断改进受限玻尔兹曼机。该方法论在铁磁体伊辛链上进行了测试，得到的非常精确地结果。
+                \item 课题相关性：受限玻尔兹曼机作为PQMC引导波函数进行优化。
+                \item 核心创新点：将PQMC和RBM结合，用非监督机器学习的方法，不断优化受限玻尔兹曼机。
+                \item 先进性：在铁磁体伊辛链上与Jordan-Wigner理论和圈量子蒙特卡罗方法得到的结果高度相符。
+                \item 影响力：引用次数：26。
+                \item 相关代码：
+            \end{itemize}
         \end{enumerate}
 
 \section{神经网络相关：方向较远}
@@ -51,7 +59,7 @@
                 \item 课题相关性：神经网络用作试探波函数予以优化，并用于PQMC进行进一步优化得到量子体系基态能量。参数少，便于训练，可用在模拟量子退火过程中多次训练作为引导波函数（没有符号问题的模型上），代价是对隐藏变量进行额外采样。
                 \item 核心创新点：非受限玻尔兹曼机作为试探波函数，并用于PQMC进行进一步优化。
                 \item 先进性：uRBM的优化结果优于传统的玻尔兹曼函数，仅三个参数取得了RBM中隐藏变量数等同于可见变量数的结果（但需要额外对隐藏变量采样）；减小了PQMC中有限walker所导致的误差。
-                \item 影响力：引用次数：26。
+                \item 影响力：引用次数：27。
                 \item 相关代码：
             \end{itemize}
         \item \citet{saito2018machine}：

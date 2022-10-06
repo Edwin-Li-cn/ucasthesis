@@ -344,9 +344,8 @@ INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.out
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.out
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.out
 OUTPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.out
-INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_退火.tex
-INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_退火.tex
-OUTPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.xdv
+INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_量子优化.tex
+INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_量子优化.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
@@ -360,6 +359,7 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+OUTPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.xdv
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_神经网络.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_神经网络.tex
 INPUT /D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_蒙特卡罗.tex
