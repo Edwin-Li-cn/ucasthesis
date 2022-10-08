@@ -1,5 +1,5 @@
 \chapter{神经网络相关文献}
-\section{神经网络相关：RBM}
+\section{神经网络相关：方向接近}
     \begin{enumerate}
         \item \citet{carleo2017solving}：
             \begin{itemize}
@@ -10,6 +10,33 @@
                 \item 影响力：引用次数：1592。用RBM表示量子多体系统的权威文章，发表在science，相关领域基本都会引用。
                 \item 相关代码：提供开源代码C++格式，github上有很多复现工作。
             \end{itemize}
+            \item \citet{saito2017solving}：
+            \begin{itemize}
+                \item 工作内容概述：受\citet{carleo2017solving}用神经网络表示量子态并优化的启发，提出使用全连接的前馈神经网络作为试探波函数，并利用基于标准最速梯度下降（如\citet{becca2017quantum}介绍的）的VMC方法求解了玻色子哈伯德模型的基态。
+                \item 课题相关性：基于神经网络的VMC方法求解量子系统基态。
+                \item 核心创新点：全连接的前馈神经网络描述量子态。
+                \item 先进性：结果与精确对角化的结果符合，未与其他方法比较。
+                \item 影响力：引用次数：123。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{inack2018projective}：
+            \begin{itemize}
+                \item 工作内容概述：采用非受限玻尔兹曼机（uRBM）作为试探波函数（仅三个参数），并用标准的随机梯度下降法（如\citet{becca2017quantum}介绍的）进行优化，继而在PQMC上对铁磁体量子伊辛链进行模拟（由于uRBM不能对隐藏变量解析求和，参考\citet{vitiello1991green}的工作进行了额外修改），得到了精确的基态能量。
+                \item 课题相关性：神经网络用作试探波函数予以优化，并用于PQMC进行进一步优化得到量子体系基态能量。参数少，便于训练，可用在模拟量子退火过程中多次训练作为引导波函数（没有符号问题的模型上），代价是对隐藏变量进行额外采样。
+                \item 核心创新点：非受限玻尔兹曼机作为试探波函数，并用于PQMC进行进一步优化。
+                \item 先进性：uRBM的优化结果优于传统的玻尔兹曼函数，仅三个参数取得了RBM中隐藏变量数等同于可见变量数的结果（但需要额外对隐藏变量采样）；减小了PQMC中有限walker所导致的误差。
+                \item 影响力：引用次数：27。
+                \item 相关代码：
+            \end{itemize}
+            \item \citet{saito2018machine}：
+            \begin{itemize}
+                \item 工作内容概述：继\citet{saito2017solving}的工作，研究了多层全连接的前馈神经网络和卷积神经网络作为试探波函数，并利用AdaGrad方法\citep{duchi2011adaptive}、Adam方法\citep{kingma2014adam}进行优化，求解了玻色子哈伯德模型的基态。
+                \item 课题相关性：用神经网络表示量子态，并进行优化来求解量子系统基态。
+                \item 核心创新点：采用多层全连接的前馈神经网络和卷积神经网络表示量子态，研究其效果。
+                \item 先进性：卷积神经网络表现最好；AdaGrad方法\citep{duchi2011adaptive}、Adam方法\citep{kingma2014adam}优于标准最速梯度下降法（如\citet{becca2017quantum}介绍的）。
+                \item 影响力：引用次数：97。
+                \item 相关代码：
+            \end{itemize}
             \item \citet{pilati2019self}：
             \begin{itemize}
                 \item 工作内容概述：采用受限玻尔兹曼机当做PQMC的引导波函数，用非监督机器学习的方法在虚时间演化的过程中，利用walker分布不断改进受限玻尔兹曼机。该方法论在铁磁体伊辛链上进行了测试，得到的非常精确地结果。
@@ -19,19 +46,20 @@
                 \item 影响力：引用次数：26。
                 \item 相关代码：
             \end{itemize}
+            \item \citet{sharir2020deep}：
+            \begin{itemize}
+                \item 工作内容概述：鉴于\citet{carleo2017solving}工作中所采用的马尔科夫链蒙特卡罗采样方法本身的计算复杂度以及产生精确、非相关联样本的困难性，该工作提出采用自回归的卷积神经网络表示量子态（NAQS）。
+                由于其自回归性，该神经网络支持准确、高效的采样。该方法论在二维相互作用的自旋模型上进行了测试，结果表明在大系统上，能够有效克服MCMC采样的缺点。
+                \item 课题相关性：自回归神经网络表示量子态，避免MCMC采样，并进行优化来求解量子系统基态。
+                \item 核心创新点：自回归神经网络表示量子态，克服MCMC采样的缺点。
+                \item 先进性：在大系统上，有效避免了RBM表示量子态采用MCMC采样估计平均能量所导致的误差。
+                \item 影响力：引用次数：133。
+                \item 相关代码：
+            \end{itemize}
         \end{enumerate}
 
 \section{神经网络相关：方向较远}
     \begin{enumerate}
-        \item \citet{saito2017solving}：
-        \begin{itemize}
-            \item 工作内容概述：受\citet{carleo2017solving}用神经网络表示量子态并优化的启发，提出使用全连接的前馈神经网络作为试探波函数，并利用基于标准最速梯度下降（如\citet{becca2017quantum}介绍的）的VMC方法求解了玻色子哈伯德模型的基态。
-            \item 课题相关性：基于神经网络的VMC方法求解量子系统基态。
-            \item 核心创新点：全连接的前馈神经网络描述量子态。
-            \item 先进性：结果与精确对角化的结果符合，未与其他方法比较。
-            \item 影响力：引用次数：123。
-            \item 相关代码：
-        \end{itemize}
         \item \citet{huang2017accelerated}：
         \begin{itemize}
             \item 工作内容概述：一般人们采用局部更新配置的蒙特卡罗方法对试探波函数进行采样，然而这种方式在大规模、挑战性很高（处在相变临界点、强阻挫等等）的量子系统中效率往往很低（新配置和原配置的改变小，互相转变的接受概率几乎相等）。
@@ -53,24 +81,6 @@
             \item 影响力：引用次数：240。通用的方法论，在统计物理、凝聚态领域比较重要。
             \item 相关代码：
         \end{itemize}
-        \item \citet{inack2018projective}：
-            \begin{itemize}
-                \item 工作内容概述：采用非受限玻尔兹曼机（uRBM）作为试探波函数（仅三个参数），并用标准的随机梯度下降法（如\citet{becca2017quantum}介绍的）进行优化，继而在PQMC上对铁磁体量子伊辛链进行模拟（由于uRBM不能对隐藏变量解析求和，参考\citet{vitiello1991green}的工作进行了额外修改），得到了精确的基态能量。
-                \item 课题相关性：神经网络用作试探波函数予以优化，并用于PQMC进行进一步优化得到量子体系基态能量。参数少，便于训练，可用在模拟量子退火过程中多次训练作为引导波函数（没有符号问题的模型上），代价是对隐藏变量进行额外采样。
-                \item 核心创新点：非受限玻尔兹曼机作为试探波函数，并用于PQMC进行进一步优化。
-                \item 先进性：uRBM的优化结果优于传统的玻尔兹曼函数，仅三个参数取得了RBM中隐藏变量数等同于可见变量数的结果（但需要额外对隐藏变量采样）；减小了PQMC中有限walker所导致的误差。
-                \item 影响力：引用次数：27。
-                \item 相关代码：
-            \end{itemize}
-        \item \citet{saito2018machine}：
-            \begin{itemize}
-                \item 工作内容概述：继\citet{saito2017solving}的工作，研究了多层全连接的前馈神经网络和卷积神经网络作为试探波函数，并利用AdaGrad方法\citep{duchi2011adaptive}、Adam方法\citep{kingma2014adam}进行优化，求解了玻色子哈伯德模型的基态。
-                \item 课题相关性：用神经网络表示量子态，并进行优化来求解量子系统基态。
-                \item 核心创新点：采用多层全连接的前馈神经网络和卷积神经网络表示量子态，研究其效果。
-                \item 先进性：卷积神经网络表现最好；AdaGrad方法\citep{duchi2011adaptive}、Adam方法\citep{kingma2014adam}优于标准最速梯度下降法（如\citet{becca2017quantum}介绍的）。
-                \item 影响力：引用次数：97。
-                \item 相关代码：
-            \end{itemize}
             \item \citet{freitas2018neural}：
             \begin{itemize}
                 \item 工作内容概述：用非受限玻尔兹曼机表示量子态，通过增加隐藏变量和更新参数的方式来表征量子算符的作用。然后通过两种近似方法将非受限玻尔兹曼机投影到了受限玻尔兹曼机上，用以提取信息，实现了不依赖高算力要求的蒙卡对神经网络量子态进行优化。

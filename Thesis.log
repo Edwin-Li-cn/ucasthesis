@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2022.5.30)  6 OCT 2022 23:08
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2022.5.30)  9 OCT 2022 00:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.tex
-(/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.tex
+**/D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.tex
+(/D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Style/ucasthesis.cls
 
@@ -231,9 +231,9 @@ Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count273
 )) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Style/ucasthesis.cfg
 File: ucasthesis.cfg 2014/10/01 v1.0 class configuration file
-) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Style/artratex_文献调研.sty
+) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Style/artratex.sty
 
-LaTeX Warning: You have requested package `Style/artratex_文献调研',
+LaTeX Warning: You have requested package `Style/artratex',
                but the package provides `artratex'.
 
 Package: artratex 2014/10/01 v1.0 LaTeX macros package
@@ -1512,11 +1512,7 @@ Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use 
 \mhchem@option@minusmathsidebearingright=\dimen315
 \mhchem@option@minustextsidebearingleft=\dimen316
 \mhchem@option@minustextsidebearingright=\dimen317
-))
-
-Class ucasthesis Warning: Invalid value of '\DEGREE', please check the spelling on input line 51.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+)) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Frontinfo.tex) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
  (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
@@ -1617,48 +1613,46 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip98
-) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
-Package: backref 2020/01/14 v1.40 Bibliographical back referencing
 )
-Package hyperref Info: Option `psdextra' set `true' on input line 51.
+Package hyperref Info: Option `psdextra' set `true' on input line 55.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/psdextra.def
 File: psdextra.def 2020/01/14 v7.00d Hyperref: Additions to PDF string support
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 51.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 55.
  (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 )
-Package hyperref Info: Option `pdffitwindow' set `false' on input line 51.
-Package hyperref Info: Option `colorlinks' set `true' on input line 51.
+Package hyperref Info: Option `pdffitwindow' set `false' on input line 55.
+Package hyperref Info: Option `colorlinks' set `true' on input line 55.
  (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2020/02/14 v3.8.1 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count364
 \l__xeCJK_listings_flag_int=\count365
-) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.aux)
-\openout1 = `文献调研.aux'.
+) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.aux)
+\openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 51.
+LaTeX Info: Redefining \selectfont on input line 55.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1667,10 +1661,10 @@ Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count366
  ABD: EveryShipout initializing macros
 
-Package chemgreek Info: Activating mapping `fontspec' on line 51.
+Package chemgreek Info: Activating mapping `fontspec' on line 55.
 
 \AtBeginShipoutBox=\box78
-Package hyperref Info: Link coloring ON on input line 51.
+Package hyperref Info: Link coloring ON on input line 55.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1680,16 +1674,17 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count367
 )
-LaTeX Info: Redefining \ref on input line 51.
-LaTeX Info: Redefining \pageref on input line 51.
-LaTeX Info: Redefining \nameref on input line 51.
- (/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.out) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.out)
+LaTeX Info: Redefining \ref on input line 55.
+LaTeX Info: Redefining \pageref on input line 55.
+LaTeX Info: Redefining \nameref on input line 55.
+ (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.out) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.out)
 \@outlinefile=\write4
-\openout4 = `文献调研.out'.
+\openout4 = `Thesis.out'.
 
-Package backref Info: ** backref set up for natbib ** on input line 51.
- (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_量子优化.tex
-第1章
+ (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Frontmatter.tex
+File: Img/ucas_logo.pdf Graphic file (type pdf)
+<use Img/ucas_logo.pdf>
+
 
 Package fontspec Warning: Font "FandolHei-Regular" does not contain requested
 (fontspec)                Script "CJK".
@@ -1710,76 +1705,154 @@ Package fontspec Info: Font family 'FandolHei-Regular(0)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 12.04628pt on input line 25.
+(Font)              scaled to size 14.05399pt on input line 8.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 9.03471pt on input line 25.
+(Font)              scaled to size 10.54048pt on input line 8.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
-(Font)              scaled to size 7.22777pt on input line 25.
+(Font)              scaled to size 7.52892pt on input line 8.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 12.0437pt on input line 25.
+(Font)              scaled to size 14.05098pt on input line 8.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 9.03278pt on input line 25.
+(Font)              scaled to size 10.53824pt on input line 8.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
-(Font)              scaled to size 7.22623pt on input line 25.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
+(Font)              scaled to size 7.52731pt on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
 
-] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16]
+] [2
 
-Package natbib Warning: Citation `inack2022neural' on page 17 undefined on input line 494.
 
-) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_神经网络.tex [17] [18
+] [3
+
+] [4
+
+
+] [5
+
+] [6
+
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 14.05249pt
+(hyperref)                replaced by space on input line 16.
+
+[1
+
+] [2
+
+]) [3] [4
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 12.045pt
+(hyperref)                replaced by space on input line 63.
+
+(/D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.toc
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 12.04628pt on input line 2.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 9.03471pt on input line 2.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(2)/m/n' will be
+(Font)              scaled to size 7.22777pt on input line 2.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 12.0437pt on input line 2.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 9.03278pt on input line 2.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular(3)/m/n' will be
+(Font)              scaled to size 7.22623pt on input line 2.
+)
+\tf@toc=\write5
+\openout5 = `Thesis.toc'.
+
+ [5
+
+] [6
+
+] (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.lof)
+\tf@lof=\write6
+\openout6 = `Thesis.lof'.
+
+ [7
+
+] [8
+
+] (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.lot)
+\tf@lot=\write7
+\openout7 = `Thesis.lot'.
+
+ [9
+
+] [10
+
+] (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Mainmatter.tex (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_Intro.tex
+第1章
+) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_combinatorial_optimize.tex [1
+
+] [2
 
 ]
 第2章
-[19] [20] [21]) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_蒙特卡罗.tex [22]
+) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_variational_Monte_Carlo.tex [3] [4
+
+]
 第3章
-[23
-
-] [24] [25] [26] [27] [28] [29]) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/文献调研_组合优化.tex [30]
+[5] [6] [7]) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_neural_network_quantum_state.tex [8]
 第4章
-) [31
+File: Img/rnn.png Graphic file (type bmp)
+<Img/rnn.png>
+[9
 
-] [32
+] [10]) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_diffusion_Monte_Carlo.tex [11] [12
 
-] (/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.bbl (/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.brf)
-\tf@brf=\write5
-\openout5 = `文献调研.brf'.
+]
+第5章
+) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_JSP.tex [13] [14
 
- [33
+]
+第6章
+[15] [16] [17] [18]) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Chap_summary.tex [19] [20
+
+]
+第7章
+)) [21] [22
+
+] (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.bbl) (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Tex/Backmatter.tex [23
 
 
 
-] [34] [35] [36] [37] [38])
+] [24
 
-Package natbib Warning: There were undefined citations.
+] [25] [26
 
-[39]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
- (/D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 71.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
-Package rerunfilecheck Info: File `文献调研.out' has not changed.
-(rerunfilecheck)             Checksum: 885491675D6B31D70077BCEFC01D0F38;952.
-Package rerunfilecheck Info: File `文献调研.brf' has not changed.
-(rerunfilecheck)             Checksum: 03710742BF05E263E7C9856B61EC1B53;6519.
+] [27] [28
+
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
+ (/D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 93.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
+Package rerunfilecheck Info: File `Thesis.out' has not changed.
+(rerunfilecheck)             Checksum: DD3CFEE8A3FAE189763E80062A6498A5;2187.
  ) 
 Here is how much of TeX's memory you used:
- 37802 strings out of 479819
- 752122 string characters out of 5895846
- 1132220 words of memory out of 5000000
- 54288 multiletter control sequences out of 15000+600000
- 536743 words of font info for 89 fonts, out of 8000000 for 9000
+ 37259 strings out of 479819
+ 744698 string characters out of 5895846
+ 1131853 words of memory out of 5000000
+ 53687 multiletter control sequences out of 15000+600000
+ 539962 words of font info for 126 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 76i,11n,115p,975b,2933s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,19n,115p,967b,2933s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /D/study_software/texlive/My_Latex_Documents/ucasthesis/文献调研.xdv (39 pages, 550308 bytes).
+Output written on /D/study_software/texlive/My_Latex_Documents/ucasthesis/Thesis.xdv (44 pages, 252648 bytes).
